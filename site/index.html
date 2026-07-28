@@ -209,6 +209,24 @@
   details[open] summary::after{transform:rotate(45deg)}
   details p{color:var(--ink-soft);font-size:1rem;padding-bottom:12px}
 
+  /* inline collapsed details (timeline) */
+  .tl details{background:none;border:none;border-radius:0;padding:0;margin:0}
+  .tl summary{
+    display:inline-block;font-family:inherit;font-size:.8rem;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--alpine);padding:2px 22px 2px 0;
+  }
+  .tl summary::after{top:-1px;right:2px;font-size:1.15rem}
+  .tl details p{font-size:.98rem;color:var(--ink-soft);padding:2px 0 4px;margin:0;max-width:40em}
+
+  /* collapsed booking note */
+  details.note{
+    background:#eef3f2;border:none;border-left:4px solid var(--lake);
+    border-radius:0 8px 8px 0;padding:14px 20px;margin:22px 0;
+  }
+  details.note summary{font-family:inherit;font-size:.98rem;font-weight:600;color:var(--lake);padding:2px 26px 2px 0}
+  details.note summary::after{color:var(--lake);top:-2px;right:2px}
+  details.note p{color:var(--ink);font-size:.98rem;padding:10px 0 2px;margin:0}
+
   footer{margin-top:70px;background:#22303a;color:#c8d2d8;font-size:.85rem}
   footer details.credits{background:transparent;border:none;border-radius:0;padding:0;margin-top:12px}
   footer details.credits summary{font-family:inherit;font-size:.85rem;color:#9fb0ba;padding:4px 0 4px}
@@ -320,14 +338,13 @@
 <section id="travel">
   <div class="wrap">
     <h2>How we'll travel: one car, then the world's most scenic trains</h2>
-    <p class="lead">The whole trip is built so that no travel day feels like a travel day. We keep a car only for the Bavarian leg, where it's genuinely useful &mdash; and from the moment we drop it at Lindau, nobody in the family drives again. Everything after Germany is trains and lake ferries, with reserved seats and our bags beside us.</p>
-    <p>Every hop is a half-day or less &mdash; except two long rail days that are the point, not the price: the Bernina crossing of the Alps, and the fast, comfortable run from the lake to Venice. Sleep in the same bed four nights running at Lake Como, three in Venice. This is a slow trip on purpose.</p>
+    <p class="lead">One car for Bavaria only &mdash; after Lindau, nobody drives again. Everything else is trains and lake ferries: reserved seats, bags beside us, no hop longer than half a day except the two rail days that are the point. This is a slow trip on purpose.</p>
 
     <div class="timeline">
       <div class="tl">
         <h3>Munich &rarr; Rettenberg</h3>
         <div class="dur">~2 hours by car</div>
-        <p>Pick up the rental in Munich and roll south-west into the Allg&auml;u. An easy motorway drive &mdash; or the slower, prettier Alpenstra&szlig;e if we feel like it.</p>
+        <details><summary>Details</summary><p>Pick up the rental in Munich and roll south-west into the Allg&auml;u &mdash; easy motorway, or the prettier Alpenstra&szlig;e.</p></details>
       </div>
       <div class="tl stay">
         <h3>Rettenberg &mdash; 2&ndash;3 nights with Dr. H</h3>
@@ -336,16 +353,16 @@
       <div class="tl">
         <h3>Rettenberg &rarr; Lindau &rarr; Chur</h3>
         <div class="dur">~50 min drive + ~2 h train</div>
-        <p>A morning in Lindau's old harbor town on Lake Constance, drop the car for good, then a lovely train ride into Switzerland down the Rhine valley. Exact departure to be confirmed once the car return is booked.</p>
+        <details><summary>Details</summary><p>A morning in Lindau's old harbor town, drop the car for good, then the train up the Rhine valley into Switzerland.</p></details>
       </div>
       <div class="tl stay">
         <h3>Chur &mdash; 1 night</h3>
-        <p>An evening stroll and a good dinner in Switzerland's oldest town &mdash; so we board the great train fresh the next morning, in morning light.</p>
+        <p>An evening stroll and a good dinner in Switzerland's oldest town.</p>
       </div>
       <div class="tl">
         <h3>The Bernina Railway: Chur &rarr; Tirano &rarr; Varenna</h3>
         <div class="dur">Morning panoramic train + short lunch stop + ~1&frac14; h regional</div>
-        <p>The headline day. Reserved panoramic seats over the highest rail crossing of the Alps, lunch in Italy where the two stations face each other across a little square, then an easy lakeside train to Varenna by mid-afternoon.</p>
+        <details><summary>Details</summary><p>The headline day: reserved panoramic seats over the highest rail crossing of the Alps, lunch in Tirano, then a lakeside train to Varenna by mid-afternoon.</p></details>
       </div>
       <div class="tl stay">
         <h3>Varenna, Lake Como &mdash; 4 nights</h3>
@@ -354,7 +371,7 @@
       <div class="tl">
         <h3>Varenna &rarr; Venice</h3>
         <div class="dur">~4 hours door to door</div>
-        <p>Regional train along the lake to Milan, one escalator-and-platform change, then the fast Frecciarossa &mdash; about 2&frac12; comfortable reserved-seat hours &mdash; arriving at a station that opens directly onto the Grand Canal.</p>
+        <details><summary>Details</summary><p>Regional train to Milan, one platform change, then the fast Frecciarossa to a station that opens directly onto the Grand Canal.</p></details>
       </div>
       <div class="tl stay">
         <h3>Venice &mdash; 3 nights</h3>
@@ -363,11 +380,11 @@
       <div class="tl">
         <h3>Venice &rarr; Milan &rarr; home</h3>
         <div class="dur">~2&frac12; h train, then a calm final morning</div>
-        <p>We never chain a train straight into a long-haul flight: Milan gets its own farewell evening, and the airport express is a simple 50-minute ride the next day.</p>
+        <details><summary>Details</summary><p>No train-to-plane sprints: Milan gets its own farewell evening, then the 50-minute airport express next morning.</p></details>
       </div>
     </div>
 
-    <div class="note"><strong>Booking notes (the boring bits, handled):</strong> the car is a domestic German one-way (Munich&nbsp;&rarr;&nbsp;Lindau) &mdash; the cheap kind; panoramic-train seats get reserved the moment dates are fixed, since September fills up; Swiss tickets via SBB, Italian via Trenitalia. Where exact times matter &mdash; the Lindau car return, the morning train &mdash; we'll confirm them before anything is booked. Nothing here requires anyone else to plan anything.</div>
+    <details class="note"><summary>Booking notes (the boring bits, handled)</summary><p>The car is a domestic German one-way (Munich&nbsp;&rarr;&nbsp;Lindau) &mdash; the cheap kind; panoramic-train seats get reserved the moment dates are fixed, since September fills up; Swiss tickets via SBB, Italian via Trenitalia. Where exact times matter &mdash; the Lindau car return, the morning train &mdash; we'll confirm them before anything is booked. Nothing here requires anyone else to plan anything.</p></details>
   </div>
 </section>
 
@@ -376,7 +393,7 @@
 <section id="munich">
   <div class="wrap">
     <h2>Munich &mdash; the gentle landing</h2>
-    <p class="lead">An optional first night to shake off the flights before the mountains. No sightseeing agenda &mdash; just the pleasant, familiar rhythm of a city Pa knows well.</p>
+    <p class="lead">An optional first night to shake off the flights before the mountains. No sightseeing agenda.</p>
     <div class="photo"><img src="images/munich.jpg" alt="Munich old town seen from above: the Frauenkirche's twin domes and the New Town Hall on Marienplatz" loading="lazy"></div>
     <div class="cards">
       <div class="card"><img class="card-img" src="images/munich-viktualienmarkt.jpg" alt="A colorful fruit stall at Munich's Viktualienmarkt" loading="lazy"><h3>Marienplatz &amp; Viktualienmarkt</h3><p>The old-town heart and the food market next door &mdash; a perfect first-morning wander before we pick up the car. The Glockenspiel plays at 11:00 and 12:00.</p></div>
@@ -391,7 +408,7 @@
 <section id="rettenberg">
   <div class="wrap">
     <h2>Rettenberg &amp; the Allg&auml;u &mdash; family days in dairy country</h2>
-    <p class="lead">Green foothills, onion-domed churches, and the Alps rising straight ahead &mdash; and at the centre of it, two or three days staying with Dr.&nbsp;H in the village. This leg isn't about ticking sights; it's about porch mornings, mountain air, and catching up with old friends.</p>
+    <p class="lead">Green foothills, onion-domed churches, and the Alps rising straight ahead &mdash; and at the centre of it, two or three days staying with Dr.&nbsp;H in the village.</p>
     <div class="photo"><img src="images/allgaeu.jpg" alt="Alpine meadow full of crocuses with the Allgäu high Alps behind" loading="lazy"></div>
     <div class="cards">
       <div class="card"><img class="card-img" src="images/allgaeu-rettenberg.jpg" alt="Rettenberg village and its church below the Grünten mountain" loading="lazy"><span class="tag">In the village</span><h3>Germany's southernmost brewery village</h3><p>Rettenberg is home to Z&ouml;tler &mdash; which claims to be Germany's oldest family-run brewery, brewing since 1447 &mdash; and Engelbr&auml;u. Brewery tours and beer gardens on the doorstep.</p></div>
@@ -409,7 +426,7 @@
 <section id="chur">
   <div class="wrap">
     <h2>Chur &mdash; one night in Switzerland's oldest town</h2>
-    <p class="lead">Five thousand years of settlement, tucked into the Rhine valley. We sleep here for one clever reason: the great panoramic train leaves in the morning &mdash; so we cross the Alps fresh, in morning light, instead of tired at the end of a ten-hour slog.</p>
+    <p class="lead">Five thousand years of settlement, tucked into the Rhine valley. We sleep here for one clever reason: the great panoramic train leaves in the morning.</p>
     <div class="photo"><img src="images/chur.jpg" alt="Chur's church spire and old town rooftops against the cliffs of the Calanda mountain" loading="lazy"></div>
     <div class="cards">
       <div class="card"><img class="card-img" src="images/chur-altstadt.jpg" alt="Painted facades and a fountain on the Arcas square in Chur's old town" loading="lazy"><h3>The car-free Altstadt</h3><p>An evening stroll through lanes, courtyards, and squares like the Arcas &mdash; five millennia of town underfoot.</p></div>
@@ -425,13 +442,13 @@
   <div class="wrap">
     <span class="eyebrow">The headline day</span>
     <h2>The Bernina Railway &mdash; the crossing</h2>
-    <p class="lead">A UNESCO World Heritage line and the highest rail crossing of the Alps: glaciers, spiral viaducts and turquoise lakes, watched from a reserved panoramic seat with coffee in hand. This is a travel day the way a concert is a commute.</p>
+    <p class="lead">A UNESCO World Heritage line and the highest rail crossing of the Alps: glaciers, spiral viaducts and turquoise lakes, watched from a reserved panoramic seat.</p>
     <div class="photo"><img src="images/bernina-lagobianco.jpg" alt="The red Bernina Express running beside the milky-turquoise Lago Bianco at the summit of the pass" loading="lazy"></div>
     <div class="cards">
-      <div class="card"><img class="card-img" src="images/bernina.jpg" alt="A red Rhaetian Railway train curving across the tall stone arches of the Landwasser Viaduct" loading="lazy"><h3>Landwasser Viaduct &amp; the Albula spirals</h3><p>The iconic curved bridge straight into a cliff-face tunnel, then a line that corkscrews <em>inside</em> the mountain to gain height.</p></div>
-      <div class="card"><img class="card-img" src="images/bernina-morteratsch.jpg" alt="The Morteratsch Glacier below the peaks of the Bernina massif" loading="lazy"><h3>Glaciers &amp; the summit</h3><p>The Morteratsch Glacier and the Bernina massif &mdash; permanent snow in view even in September &mdash; then the 2,253&nbsp;m summit at Ospizio Bernina beside the milky-turquoise Lago Bianco.</p></div>
-      <div class="card"><img class="card-img" src="images/bernina-brusio.jpg" alt="A red train crossing the Brusio circular viaduct, its track looping beneath" loading="lazy"><h3>Down into Italy</h3><p>The balcony view from Alp Gr&uuml;m, the famous Brusio circular viaduct where the train loops over itself, and arrival among the vineyards in Tirano &mdash; where lunch means pizzoccheri, the Valtellina's buckwheat pasta.</p></div>
-      <div class="card"><img class="card-img" src="images/bernina-alpgruem.jpg" alt="The view from Alp Grüm down the green Poschiavo valley toward its lake" loading="lazy"><h3>Then a short lakeside hop</h3><p>From Tirano, an easy regional train (~1&frac14; h) along Lake Como's eastern shore brings us to Varenna by mid-afternoon. Morning departure from Chur &mdash; historically around 8:15, arriving Tirano around a quarter to one; we'll confirm the exact 2027 times when we book.</p></div>
+      <div class="card"><img class="card-img" src="images/bernina.jpg" alt="A red Rhaetian Railway train curving across the tall stone arches of the Landwasser Viaduct" loading="lazy"><h3>Landwasser Viaduct &amp; the Albula spirals</h3><p>The curved bridge into a cliff-face tunnel, then a line that corkscrews <em>inside</em> the mountain.</p></div>
+      <div class="card"><img class="card-img" src="images/bernina-morteratsch.jpg" alt="The Morteratsch Glacier below the peaks of the Bernina massif" loading="lazy"><h3>Glaciers &amp; the summit</h3><p>The Morteratsch Glacier, then the 2,253&nbsp;m summit beside the milky-turquoise Lago Bianco.</p></div>
+      <div class="card"><img class="card-img" src="images/bernina-brusio.jpg" alt="A red train crossing the Brusio circular viaduct, its track looping beneath" loading="lazy"><h3>Down into Italy</h3><p>The balcony view from Alp Gr&uuml;m, the Brusio viaduct where the train loops over itself, and lunch in Tirano &mdash; pizzoccheri, of course.</p></div>
+      <div class="card"><img class="card-img" src="images/bernina-alpgruem.jpg" alt="The view from Alp Grüm down the green Poschiavo valley toward its lake" loading="lazy"><h3>Then a short lakeside hop</h3><p>An easy regional train (~1&frac14; h) along Lake Como's eastern shore brings us to Varenna by mid-afternoon.</p></div>
     </div>
     <p>Official line information: <a href="https://www.rhb.ch/en/panoramic-journeys/bernina-express" target="_blank" rel="noopener">Bernina Express &mdash; Rhaetian Railway</a>.</p>
   </div>
