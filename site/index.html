@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Alps by Train — Our Family Journey, September 2027</title>
+<style>
+  :root{
+    --ink:#22303a;
+    --ink-soft:#4a5a66;
+    --cream:#faf8f3;
+    --card:#ffffff;
+    --alpine:#33606f;
+    --alpine-deep:#24485425;
+    --lake:#2e6e63;
+    --gold:#b0812f;
+    --gold-ink:#8a6420;
+    --line:#e3ddd2;
+    --hairline:#d8d1c4;
+    --serif:'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  @media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+  body{
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:19px;line-height:1.65;color:var(--ink);
+    background:var(--cream);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{font-family:var(--serif);font-weight:400}
+  h2{font-size:2.1rem;line-height:1.2;margin-bottom:.6rem;color:var(--ink)}
+  h3{font-size:1.35rem;margin-bottom:.4rem}
+  p{margin-bottom:1rem}
+  a{color:var(--alpine)}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+
+  /* nav */
+  nav{
+    position:sticky;top:0;z-index:50;background:rgba(250,248,243,.95);
+    backdrop-filter:blur(6px);border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;gap:4px;overflow-x:auto;padding:0 12px;-webkit-overflow-scrolling:touch}
+  nav a{
+    white-space:nowrap;text-decoration:none;color:var(--ink-soft);
+    font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;
+    padding:14px 12px;border-bottom:3px solid transparent;
+  }
+  nav a:hover{color:var(--alpine);border-bottom-color:var(--alpine)}
+  @media (max-width:840px){
+    nav::after{
+      content:"";position:absolute;right:0;top:0;bottom:1px;width:38px;
+      background:linear-gradient(90deg,rgba(250,248,243,0),rgba(250,248,243,.95));
+      pointer-events:none;
+    }
+  }
+  a:focus-visible,summary:focus-visible,.lb button:focus-visible{
+    outline:3px solid var(--alpine);outline-offset:2px;border-radius:2px;
+  }
+
+  /* hero */
+  header{position:relative;color:#fff;overflow:hidden;display:flex;align-items:center;min-height:72vh}
+  header>.wrap{width:100%}
+  header .bg{
+    position:absolute;inset:0;
+    background:url('images/bernina-hero.jpg') center 58%/cover no-repeat;
+  }
+  header .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,30,40,.62) 0%,rgba(15,30,40,.42) 45%,rgba(15,30,40,.80) 100%)}
+  header .wrap{position:relative;padding-top:96px;padding-bottom:52px;text-align:center}
+  .kicker{letter-spacing:.28em;text-transform:uppercase;font-size:.8rem;opacity:.92;margin-bottom:14px}
+  header h1{font-size:clamp(2.3rem,6vw,3.9rem);line-height:1.12;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+  header .sub{
+    font-family:var(--serif);font-style:italic;
+    font-size:clamp(1.05rem,2.6vw,1.35rem);max-width:46em;margin:18px auto 0;
+    text-shadow:0 1px 10px rgba(0,0,0,.55);
+  }
+  header .who{margin-top:14px;font-size:.95rem;opacity:.9;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+
+  /* route strip */
+  .route{background:#fff;border-bottom:1px solid var(--line)}
+  .route .wrap{padding:28px 20px 34px}
+  .route h2{text-align:center;font-size:1.15rem;font-family:inherit;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:22px}
+  .stops{display:flex;flex-wrap:wrap;justify-content:center;gap:0;row-gap:18px}
+  .stop{display:flex;align-items:center}
+  .stop .node{text-align:center;min-width:96px;padding:0 6px}
+  .stop .dot{width:13px;height:13px;border-radius:50%;background:var(--alpine);margin:0 auto 8px;box-shadow:0 0 0 4px var(--alpine-deep)}
+  .stop.hl .dot{background:var(--gold);box-shadow:0 0 0 4px #b0812f2e}
+  .stop .name{font-family:var(--serif);font-size:1.02rem;line-height:1.25}
+  .stop .nights{font-size:.8rem;color:var(--ink-soft)}
+  .stop .link-arm{width:42px;height:2px;background:var(--hairline);margin-top:-26px}
+  @media (max-width:760px){
+    .stops{flex-direction:column;align-items:flex-start;max-width:320px;margin:0 auto}
+    .stop{width:100%}
+    .stop .node{display:flex;align-items:baseline;gap:12px;text-align:left;min-width:0;padding:0}
+    .stop .dot{margin:0;position:relative;top:1px;flex:none}
+    .stop .nights{margin-left:auto}
+    .stop .link-arm{display:none}
+    .stop + .stop{margin-top:2px;padding-top:14px}
+  }
+
+  /* map */
+  .mapbox{max-width:540px;margin:34px auto 0;padding-top:26px;border-top:1px dashed var(--hairline)}
+  .realmap{position:relative;border-radius:10px;overflow:hidden;box-shadow:0 8px 26px rgba(34,48,58,.14)}
+  .realmap img{width:100%;display:block}
+  .realmap svg{position:absolute;inset:0;width:100%;height:100%}
+  .halo{fill:none;stroke:#fff;stroke-width:9;stroke-linecap:round;opacity:.85}
+  .leg{fill:none;stroke-width:4;stroke-linecap:round}
+  .leg.car{stroke:#5c6e7a;stroke-dasharray:3 10}
+  .leg.rail{stroke:#20586a}
+  .leg.bernina{stroke:#c2871f;stroke-width:5}
+  .leg.return{stroke:#fff;stroke-width:2.4;stroke-dasharray:2 9;opacity:.9}
+  .stopdot circle{fill:#fff;stroke:#20586a;stroke-width:4}
+  .hldot{fill:none;stroke:#c2871f;stroke-width:3}
+  .place text{
+    font-family:var(--serif);font-size:28px;font-weight:bold;fill:#1c2b33;
+    stroke:#fff;stroke-width:5;paint-order:stroke;stroke-linejoin:round;
+  }
+  .mapattr{font-size:.72rem;color:var(--ink-soft);text-align:right;margin:6px 2px 0}
+  .mapattr a{color:var(--ink-soft)}
+  .maplegend{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;margin-top:10px;font-size:.82rem;color:var(--ink-soft)}
+  .maplegend i{display:inline-block;width:26px;height:0;border-top:3px solid;vertical-align:middle;margin-right:6px}
+  .maplegend .l-car{border-top-style:dashed;border-color:#8a97a0}
+  .maplegend .l-rail{border-color:var(--alpine)}
+  .maplegend .l-bern{border-color:var(--gold);border-top-width:4px}
+  .maplegend .l-ret{border-top-style:dotted;border-color:#b8b0a1}
+
+  /* sections */
+  section{padding:64px 0 30px}
+  .eyebrow{
+    display:block;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--gold-ink);margin-bottom:10px;
+  }
+  .eyebrow::before{
+    content:"";display:inline-block;width:26px;height:3px;background:var(--gold);
+    margin-right:12px;vertical-align:middle;
+  }
+  .lead{font-family:var(--serif);font-size:1.22rem;color:var(--ink-soft);max-width:44em}
+  .photo{border-radius:10px;overflow:hidden;margin:26px 0 8px;box-shadow:0 10px 30px rgba(34,48,58,.13)}
+  .photo img{width:100%;height:clamp(240px,45vw,480px);object-fit:cover}
+  .caption{font-size:.85rem;color:var(--ink-soft);margin:8px 2px 0;font-style:italic}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:16px;margin:26px 0 10px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:20px 20px 16px;box-shadow:0 3px 14px rgba(34,48,58,.05);
+  }
+  .card h3{color:var(--alpine);font-size:1.18rem}
+  .card-img{
+    width:calc(100% + 40px);margin:-20px -20px 16px;max-width:none;
+    height:165px;object-fit:cover;display:block;cursor:zoom-in;
+    border-radius:9px 9px 0 0;
+  }
+  .photo img{cursor:zoom-in}
+
+  /* lightbox */
+  .lb{position:fixed;inset:0;z-index:100;background:rgba(18,26,32,.93);display:none;align-items:center;justify-content:center;flex-direction:column;padding:20px}
+  .lb.open{display:flex}
+  .lb img{max-width:min(96vw,1100px);max-height:78vh;object-fit:contain;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .lb .cap{color:#dbe4e9;font-family:var(--serif);font-style:italic;font-size:1rem;margin-top:14px;text-align:center;max-width:44em}
+  .lb .cnt{color:#8fa4af;font-size:.8rem;letter-spacing:.1em;margin-top:6px}
+  .lb button{
+    position:absolute;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);
+    color:#fff;font-size:1.6rem;line-height:1;cursor:pointer;border-radius:50%;
+    width:52px;height:52px;display:flex;align-items:center;justify-content:center;
+  }
+  .lb button:hover{background:rgba(255,255,255,.2)}
+  .lb .prev{left:14px;top:50%;transform:translateY(-50%)}
+  .lb .next{right:14px;top:50%;transform:translateY(-50%)}
+  .lb .close{top:14px;right:14px;font-size:1.3rem}
+  @media (max-width:700px){
+    .lb .prev,.lb .next{top:auto;bottom:18px;transform:none}
+    .lb .prev{left:24vw}.lb .next{right:24vw}
+  }
+  .card p{font-size:.98rem;margin-bottom:.4rem;color:var(--ink)}
+  .card .tag{display:inline-block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:6px}
+  .card:not(:has(.card-img)){background:#f5f1e7}
+
+  .note{
+    background:#eef3f2;border-left:4px solid var(--lake);border-radius:0 8px 8px 0;
+    padding:16px 20px;margin:22px 0;font-size:.98rem;
+  }
+  .note strong{color:var(--lake)}
+
+  /* travel timeline */
+  .timeline{margin:30px 0 6px;border-left:3px solid var(--hairline);padding-left:26px}
+  .tl{position:relative;padding-bottom:26px}
+  .tl:last-child{padding-bottom:4px}
+  .tl::before{
+    content:"";position:absolute;left:-35px;top:6px;width:13px;height:13px;border-radius:50%;
+    background:var(--alpine);box-shadow:0 0 0 4px var(--alpine-deep);
+  }
+  .tl.stay::before{background:#9db3ad}
+  .tl h3{font-size:1.15rem}
+  .tl .dur{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+  .tl p{font-size:.98rem;color:var(--ink-soft);margin-bottom:0;max-width:40em}
+
+  /* FAQ */
+  details{
+    background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:6px 22px;margin-bottom:12px;
+  }
+  summary{
+    cursor:pointer;font-family:var(--serif);font-size:1.18rem;padding:12px 0;
+    list-style:none;position:relative;padding-right:34px;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";position:absolute;right:4px;top:8px;font-size:1.5rem;color:var(--alpine);transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{color:var(--ink-soft);font-size:1rem;padding-bottom:12px}
+
+  footer{margin-top:70px;background:#22303a;color:#c8d2d8;font-size:.85rem}
+  footer details.credits{background:transparent;border:none;border-radius:0;padding:0;margin-top:12px}
+  footer details.credits summary{font-family:inherit;font-size:.85rem;color:#9fb0ba;padding:4px 0 4px}
+  footer details.credits summary::after{content:none}
+  footer details.credits ul{list-style:none;columns:2;column-gap:34px;margin-top:8px}
+  footer details.credits li{margin-bottom:4px;break-inside:avoid}
+  @media (max-width:700px){footer details.credits ul{columns:1}}
+  footer .wrap{padding:36px 20px}
+  footer a{color:#9fc0cc}
+  footer p{margin-bottom:.6rem}
+  .divider{height:1px;background:var(--line);max-width:1020px;margin:40px auto 0}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="bg" role="img" aria-label="A red Rhaetian Railway train crossing the curved stone Landwasser Viaduct in the Swiss Alps"></div>
+  <div class="shade"></div>
+  <div class="wrap">
+    <div class="kicker">September 2027 &middot; Bavaria &middot; Switzerland &middot; Italy</div>
+    <h1>The Alps, Slowly</h1>
+    <p class="sub">Family days in the Bavarian Alps with Dr.&nbsp;H &mdash; then the highest railway over the Alps, four slow days on Italy's most beautiful lake, three days in the world's most extraordinary city, and one grand farewell in Milan.</p>
+    <p class="who">Mum &amp; Pa fly in from Singapore &middot; X &amp; E from Philadelphia &middot; ~12 nights, early&ndash;mid September</p>
+  </div>
+</header>
+
+<nav aria-label="Sections">
+  <div class="wrap">
+    <a href="#travel">How we travel</a>
+    <a href="#munich">Munich</a>
+    <a href="#rettenberg">Rettenberg</a>
+    <a href="#chur">Chur</a>
+    <a href="#bernina">Bernina</a>
+    <a href="#varenna">Varenna</a>
+    <a href="#venice">Venice</a>
+    <a href="#milan">Milan</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<div class="route">
+  <div class="wrap">
+    <h2>The Route</h2>
+    <div class="stops">
+      <div class="stop"><div class="node"><div class="dot"></div><div class="name">Munich</div><div class="nights">night 0 &middot; optional</div></div><div class="link-arm"></div></div>
+      <div class="stop"><div class="node"><div class="dot"></div><div class="name">Rettenberg</div><div class="nights">2&ndash;3 nights</div></div><div class="link-arm"></div></div>
+      <div class="stop"><div class="node"><div class="dot"></div><div class="name">Chur</div><div class="nights">1 night</div></div><div class="link-arm"></div></div>
+      <div class="stop hl"><div class="node"><div class="dot"></div><div class="name">Bernina Railway</div><div class="nights">the great crossing</div></div><div class="link-arm"></div></div>
+      <div class="stop"><div class="node"><div class="dot"></div><div class="name">Varenna</div><div class="nights">4 nights</div></div><div class="link-arm"></div></div>
+      <div class="stop"><div class="node"><div class="dot"></div><div class="name">Venice</div><div class="nights">3 nights</div></div><div class="link-arm"></div></div>
+      <div class="stop"><div class="node"><div class="dot"></div><div class="name">Milan</div><div class="nights">1 night</div></div></div>
+    </div>
+
+    <div class="mapbox">
+      <div class="realmap">
+        <img src="images/map-base.jpg" alt="Terrain map of the Alps between Munich and northern Italy" loading="lazy">
+        <svg viewBox="0 0 820 884" role="img" aria-label="The route from Munich through the Alps to Venice and Milan drawn on the map">
+          <!-- car leg: Munich → Rettenberg → Lindau -->
+          <path class="halo" d="M571,76 C500,130 390,205 338,231 C300,238 258,238 227,236"/>
+          <path class="leg car" d="M571,76 C500,130 390,205 338,231 C300,238 258,238 227,236"/>
+          <!-- train: Lindau → Chur (Rhine valley) -->
+          <path class="halo" d="M227,236 C196,280 186,350 199,423"/>
+          <path class="leg rail" d="M227,236 C196,280 186,350 199,423"/>
+          <!-- Bernina: Chur → Tirano (via Albula & the pass) -->
+          <path class="halo" d="M199,423 C262,462 330,505 315,590"/>
+          <path class="leg bernina" d="M199,423 C262,462 330,505 315,590"/>
+          <!-- Tirano → Varenna (Valtellina) -->
+          <path class="halo" d="M315,590 C255,628 190,628 154,645"/>
+          <path class="leg rail" d="M315,590 C255,628 190,628 154,645"/>
+          <!-- Varenna → Milan → Venice -->
+          <path class="halo" d="M154,645 C142,692 130,742 137,787"/>
+          <path class="leg rail" d="M154,645 C142,692 130,742 137,787"/>
+          <path class="halo" d="M137,787 C350,758 550,768 710,793"/>
+          <path class="leg rail" d="M137,787 C350,758 550,768 710,793"/>
+          <!-- return Venice → Milan (fly home) -->
+          <path class="leg return" d="M710,803 C545,832 300,838 145,801"/>
+          <!-- stops -->
+          <g class="stopdot">
+            <circle cx="571" cy="76" r="9"/><circle cx="338" cy="231" r="9"/>
+            <circle cx="227" cy="236" r="7"/><circle cx="199" cy="423" r="9"/>
+            <circle cx="315" cy="590" r="7"/><circle cx="154" cy="645" r="9"/>
+            <circle cx="137" cy="787" r="9"/><circle cx="710" cy="793" r="9"/>
+          </g>
+          <circle class="hldot" cx="199" cy="423" r="15"/>
+          <!-- labels -->
+          <g class="place">
+            <text x="587" y="82">Munich</text>
+            <text x="352" y="222">Rettenberg</text>
+            <text x="215" y="222" text-anchor="end">Lindau</text>
+            <text x="216" y="430">Chur</text>
+            <text x="330" y="597">Tirano</text>
+            <text x="140" y="633" text-anchor="end">Varenna</text>
+            <text x="128" y="815" text-anchor="end">Milan</text>
+            <text x="700" y="778" text-anchor="end">Venice</text>
+          </g>
+        </svg>
+      </div>
+      <div class="maplegend">
+        <span><i class="l-car"></i> car (Bavaria only)</span>
+        <span><i class="l-rail"></i> train</span>
+        <span><i class="l-bern"></i> Bernina panoramic</span>
+        <span><i class="l-ret"></i> back to Milan &amp; fly home</span>
+      </div>
+      <p class="mapattr">Map: &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors, SRTM &middot; style: &copy; <a href="https://opentopomap.org" target="_blank" rel="noopener">OpenTopoMap</a> (CC-BY-SA)</p>
+    </div>
+  </div>
+</div>
+
+<section id="travel">
+  <div class="wrap">
+    <h2>How we'll travel: one car, then the world's most scenic trains</h2>
+    <p class="lead">The whole trip is built so that no travel day feels like a travel day. We keep a car only for the Bavarian leg, where it's genuinely useful &mdash; and from the moment we drop it at Lindau, nobody in the family drives again. Everything after Germany is trains and lake ferries, with reserved seats and our bags beside us.</p>
+    <p>Every hop is a half-day or less &mdash; except two long rail days that are the point, not the price: the Bernina crossing of the Alps, and the fast, comfortable run from the lake to Venice. Sleep in the same bed four nights running at Lake Como, three in Venice. This is a slow trip on purpose.</p>
+
+    <div class="timeline">
+      <div class="tl">
+        <h3>Munich &rarr; Rettenberg</h3>
+        <div class="dur">~2 hours by car</div>
+        <p>Pick up the rental in Munich and roll south-west into the Allg&auml;u. An easy motorway drive &mdash; or the slower, prettier Alpenstra&szlig;e if we feel like it.</p>
+      </div>
+      <div class="tl stay">
+        <h3>Rettenberg &mdash; 2&ndash;3 nights with Dr. H</h3>
+        <p>Family time, village time, mountain time. The car stays with us for day trips.</p>
+      </div>
+      <div class="tl">
+        <h3>Rettenberg &rarr; Lindau &rarr; Chur</h3>
+        <div class="dur">~50 min drive + ~2 h train</div>
+        <p>A morning in Lindau's old harbor town on Lake Constance, drop the car for good, then a lovely train ride into Switzerland down the Rhine valley. Exact departure to be confirmed once the car return is booked.</p>
+      </div>
+      <div class="tl stay">
+        <h3>Chur &mdash; 1 night</h3>
+        <p>An evening stroll and a good dinner in Switzerland's oldest town &mdash; so we board the great train fresh the next morning, in morning light.</p>
+      </div>
+      <div class="tl">
+        <h3>The Bernina Railway: Chur &rarr; Tirano &rarr; Varenna</h3>
+        <div class="dur">Morning panoramic train + short lunch stop + ~1&frac14; h regional</div>
+        <p>The headline day. Reserved panoramic seats over the highest rail crossing of the Alps, lunch in Italy where the two stations face each other across a little square, then an easy lakeside train to Varenna by mid-afternoon.</p>
+      </div>
+      <div class="tl stay">
+        <h3>Varenna, Lake Como &mdash; 4 nights</h3>
+        <p>The slow middle of the trip. Ferries, gardens, long lunches.</p>
+      </div>
+      <div class="tl">
+        <h3>Varenna &rarr; Venice</h3>
+        <div class="dur">~4 hours door to door</div>
+        <p>Regional train along the lake to Milan, one escalator-and-platform change, then the fast Frecciarossa &mdash; about 2&frac12; comfortable reserved-seat hours &mdash; arriving at a station that opens directly onto the Grand Canal.</p>
+      </div>
+      <div class="tl stay">
+        <h3>Venice &mdash; 3 nights</h3>
+        <p>Early mornings and late evenings in the city, after the day-trippers leave.</p>
+      </div>
+      <div class="tl">
+        <h3>Venice &rarr; Milan &rarr; home</h3>
+        <div class="dur">~2&frac12; h train, then a calm final morning</div>
+        <p>We never chain a train straight into a long-haul flight: Milan gets its own farewell evening, and the airport express is a simple 50-minute ride the next day.</p>
+      </div>
+    </div>
+
+    <div class="note"><strong>Booking notes (the boring bits, handled):</strong> the car is a domestic German one-way (Munich&nbsp;&rarr;&nbsp;Lindau) &mdash; the cheap kind; panoramic-train seats get reserved the moment dates are fixed, since September fills up; Swiss tickets via SBB, Italian via Trenitalia. Where exact times matter &mdash; the Lindau car return, the morning train &mdash; we'll confirm them before anything is booked. Nothing here requires anyone else to plan anything.</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="munich">
+  <div class="wrap">
+    <h2>Munich &mdash; the gentle landing</h2>
+    <p class="lead">An optional first night to shake off the flights before the mountains. No sightseeing agenda &mdash; just the pleasant, familiar rhythm of a city Pa knows well.</p>
+    <div class="photo"><img src="images/munich.jpg" alt="Munich old town seen from above: the Frauenkirche's twin domes and the New Town Hall on Marienplatz" loading="lazy"></div>
+    <div class="cards">
+      <div class="card"><img class="card-img" src="images/munich-viktualienmarkt.jpg" alt="A colorful fruit stall at Munich's Viktualienmarkt" loading="lazy"><h3>Marienplatz &amp; Viktualienmarkt</h3><p>The old-town heart and the food market next door &mdash; a perfect first-morning wander before we pick up the car. The Glockenspiel plays at 11:00 and 12:00.</p></div>
+      <div class="card"><img class="card-img" src="images/munich-beerhall.jpg" alt="The painted vaulted hall and long tables of the Hofbräuhaus" loading="lazy"><h3>A classic beer-hall evening</h3><p>Hofbr&auml;uhaus for the famous one, Augustiner Br&auml;ustuben for the local's choice. Pretzels, roast pork, litre steins.</p></div>
+      <div class="card"><img class="card-img" src="images/munich-eisbach.jpg" alt="A surfer riding the standing Eisbach wave in Munich's English Garden" loading="lazy"><h3>English Garden</h3><p>If energy allows: a stroll to watch the river surfers on the Eisbach wave.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="rettenberg">
+  <div class="wrap">
+    <h2>Rettenberg &amp; the Allg&auml;u &mdash; family days in dairy country</h2>
+    <p class="lead">Green foothills, onion-domed churches, and the Alps rising straight ahead &mdash; and at the centre of it, two or three days staying with Dr.&nbsp;H in the village. This leg isn't about ticking sights; it's about porch mornings, mountain air, and catching up with old friends.</p>
+    <div class="photo"><img src="images/allgaeu.jpg" alt="Alpine meadow full of crocuses with the Allgäu high Alps behind" loading="lazy"></div>
+    <div class="cards">
+      <div class="card"><img class="card-img" src="images/allgaeu-rettenberg.jpg" alt="Rettenberg village and its church below the Grünten mountain" loading="lazy"><span class="tag">In the village</span><h3>Germany's southernmost brewery village</h3><p>Rettenberg is home to Z&ouml;tler &mdash; which claims to be Germany's oldest family-run brewery, brewing since 1447 &mdash; and Engelbr&auml;u. Brewery tours and beer gardens on the doorstep.</p></div>
+      <div class="card"><span class="tag">In the village</span><h3>Gr&uuml;nten &amp; the cheese dairies</h3><p>Easy walks and viewpoints on "the guardian of the Allg&auml;u," and alpine dairies selling Bergk&auml;se straight from the source.</p></div>
+      <div class="card"><img class="card-img" src="images/allgaeu-iller.jpg" alt="The walkway through the Breitachklamm gorge above turquoise water" loading="lazy"><span class="tag">For X &amp; E · e-bikes</span><h3>The Iller valley ride</h3><p>The signature day: ~50 km of flat valley path to Oberstdorf and back, mountains in view the whole way &mdash; with the Breitachklamm gorge walk or a cable car up the Nebelhorn at the turnaround. E-bikes rent locally.</p></div>
+      <div class="card"><img class="card-img" src="images/allgaeu-alpsee.jpg" alt="Boathouses on the Großer Alpsee near Immenstadt with the Alps behind" loading="lazy"><span class="tag">For X &amp; E · e-bikes</span><h3>Lakes &amp; valleys</h3><p>A rolling lakes day (Gro&szlig;er Alpsee, Niedersonthofener See &mdash; still swimmable in early September), or the climb into Kleinwalsertal, a dead-end Austrian valley reachable only from Germany.</p></div>
+      <div class="card"><img class="card-img" src="images/neuschwanstein.jpg" alt="Neuschwanstein Castle on its wooded crag, seen from the Marienbrücke" data-cap="Neuschwanstein from the Marienbrücke — the view that needs no ticket" loading="lazy"><span class="tag">Day trip by car</span><h3>Neuschwanstein &amp; the Wieskirche</h3><p>The fairy-tale castle (~1&frac14; h): the Marienbr&uuml;cke viewpoint is the real highlight, with lunch in pretty F&uuml;ssen &mdash; and the UNESCO rococo Wieskirche, standing alone in its meadow, as the natural add-on. Interior tickets get booked well in advance; the views need no ticket at all.</p></div>
+      <div class="card"><img class="card-img" src="images/allgaeu-lindau.jpg" alt="Lindau harbor entrance with the Bavarian Lion and lighthouse on Lake Constance" loading="lazy"><span class="tag">Day trip by car</span><h3>Lindau &mdash; or Bregenz</h3><p>Lindau's historic harbor island on Lake Constance is where we drop the car anyway &mdash; we'll arrive early and enjoy it. Alternative outing: the Pf&auml;nder cable car above Bregenz for the lake panorama.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="chur">
+  <div class="wrap">
+    <h2>Chur &mdash; one night in Switzerland's oldest town</h2>
+    <p class="lead">Five thousand years of settlement, tucked into the Rhine valley. We sleep here for one clever reason: the great panoramic train leaves in the morning &mdash; so we cross the Alps fresh, in morning light, instead of tired at the end of a ten-hour slog.</p>
+    <div class="photo"><img src="images/chur.jpg" alt="Chur's church spire and old town rooftops against the cliffs of the Calanda mountain" loading="lazy"></div>
+    <div class="cards">
+      <div class="card"><img class="card-img" src="images/chur-altstadt.jpg" alt="Painted facades and a fountain on the Arcas square in Chur's old town" loading="lazy"><h3>The car-free Altstadt</h3><p>An evening stroll through lanes, courtyards, and squares like the Arcas &mdash; five millennia of town underfoot.</p></div>
+      <div class="card"><img class="card-img" src="images/chur-kathedrale.jpg" alt="Chur Cathedral and the bishop's court quarter against the mountains" loading="lazy"><h3>The cathedral on the hill</h3><p>The 12th-century cathedral and the bishop's court district above the rooftops &mdash; a ten-minute climb, worth every step.</p></div>
+      <div class="card"><h3>A Graub&uuml;nden dinner</h3><p>Capuns, pizzokel, B&uuml;ndnerfleisch &mdash; the mountain canton's specialties, then an early night.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="bernina">
+  <div class="wrap">
+    <span class="eyebrow">The headline day</span>
+    <h2>The Bernina Railway &mdash; the crossing</h2>
+    <p class="lead">A UNESCO World Heritage line and the highest rail crossing of the Alps: glaciers, spiral viaducts and turquoise lakes, watched from a reserved panoramic seat with coffee in hand. This is a travel day the way a concert is a commute.</p>
+    <div class="photo"><img src="images/bernina-lagobianco.jpg" alt="The red Bernina Express running beside the milky-turquoise Lago Bianco at the summit of the pass" loading="lazy"></div>
+    <div class="cards">
+      <div class="card"><img class="card-img" src="images/bernina.jpg" alt="A red Rhaetian Railway train curving across the tall stone arches of the Landwasser Viaduct" loading="lazy"><h3>Landwasser Viaduct &amp; the Albula spirals</h3><p>The iconic curved bridge straight into a cliff-face tunnel, then a line that corkscrews <em>inside</em> the mountain to gain height.</p></div>
+      <div class="card"><img class="card-img" src="images/bernina-morteratsch.jpg" alt="The Morteratsch Glacier below the peaks of the Bernina massif" loading="lazy"><h3>Glaciers &amp; the summit</h3><p>The Morteratsch Glacier and the Bernina massif &mdash; permanent snow in view even in September &mdash; then the 2,253&nbsp;m summit at Ospizio Bernina beside the milky-turquoise Lago Bianco.</p></div>
+      <div class="card"><img class="card-img" src="images/bernina-brusio.jpg" alt="A red train crossing the Brusio circular viaduct, its track looping beneath" loading="lazy"><h3>Down into Italy</h3><p>The balcony view from Alp Gr&uuml;m, the famous Brusio circular viaduct where the train loops over itself, and arrival among the vineyards in Tirano &mdash; where lunch means pizzoccheri, the Valtellina's buckwheat pasta.</p></div>
+      <div class="card"><img class="card-img" src="images/bernina-alpgruem.jpg" alt="The view from Alp Grüm down the green Poschiavo valley toward its lake" loading="lazy"><h3>Then a short lakeside hop</h3><p>From Tirano, an easy regional train (~1&frac14; h) along Lake Como's eastern shore brings us to Varenna by mid-afternoon. Morning departure from Chur &mdash; historically around 8:15, arriving Tirano around a quarter to one; we'll confirm the exact 2027 times when we book.</p></div>
+    </div>
+    <p>Official line information: <a href="https://www.rhb.ch/en/panoramic-journeys/bernina-express" target="_blank" rel="noopener">Bernina Express &mdash; Rhaetian Railway</a>.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="varenna">
+  <div class="wrap">
+    <h2>Varenna, Lake Como &mdash; the slow middle</h2>
+    <p class="lead">A small fishing village of pastel houses on the quiet eastern shore &mdash; the calm alternative to famous Bellagio, which sits just across the water. Four nights in one place, unpacked, with the lake ferries as our sightseeing.</p>
+    <div class="photo"><img src="images/varenna.jpg" alt="Varenna's pastel houses stacked above the Lake Como shoreline at dusk" loading="lazy"></div>
+    <div class="cards">
+      <div class="card"><img class="card-img" src="images/varenna-bellagio.jpg" alt="Bellagio's waterfront seen from Lake Como" loading="lazy"><h3>The ferry triangle</h3><p>Varenna &harr; Bellagio &harr; Menaggio by lake ferry: visit the famous villages without sleeping in their crowds. The mid-lake ferries are the region's transport <em>and</em> its best sightseeing.</p></div>
+      <div class="card"><img class="card-img" src="images/varenna-monastero.jpg" alt="Villa Monastero's lakefront garden pavilion over the water" loading="lazy"><h3>Villas &amp; gardens</h3><p>Villa Monastero's kilometre of lakefront botanical gardens right in Varenna, and the grand showpiece <a href="https://www.villacarlotta.it/en/" target="_blank" rel="noopener">Villa Carlotta</a> across the water in Tremezzo.</p></div>
+      <div class="card"><img class="card-img" src="images/varenna-vezio.jpg" alt="The ruin of Castello di Vezio on its promontory above Lake Como" loading="lazy"><h3>Castello di Vezio</h3><p>The ruined castle above the village &mdash; a short uphill walk to falconry displays and the best panorama of the lake's three branches.</p></div>
+      <div class="card"><img class="card-img" src="images/varenna-passeggiata.jpg" alt="The railed lakeside walkway along Varenna's shore" loading="lazy"><h3>Village pleasures</h3><p>The Lovers' Walk along the cliffside shore, the foaming little Fiumelatte &mdash; one of Italy's shortest rivers &mdash; market mornings, a swim from the lido, perhaps a private boat hour on the lake.</p></div>
+      <div class="card"><img class="card-img" src="images/varenna-vigneti.jpg" alt="Terraced Valtellina vineyards climbing the valley walls" loading="lazy"><h3>At the table</h3><p>Lake fish &mdash; missoltini, lavarello &mdash; and Valtellina wines from the terraced vineyards just up the valley.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="venice">
+  <div class="wrap">
+    <h2>Venice &mdash; three nights in the city like no other</h2>
+    <p class="lead">Canals for streets, boats for buses &mdash; and crucially, <em>nobody</em> drives here, so every visitor moves the same way: on foot and by vaporetto. Three nights means we get Venice at its best, in the early mornings and late evenings after the day-trippers leave.</p>
+    <div class="photo"><img src="images/venice.jpg" alt="A gondola and water taxis on Venice's Grand Canal in golden evening light" loading="lazy"></div>
+    <div class="cards">
+      <div class="card"><img class="card-img" src="images/venice-sanmarco.jpg" alt="The facade of St Mark's Basilica in warm light" loading="lazy"><h3>San Marco, early</h3><p>The Basilica's golden mosaics (booked ahead), the Doge's Palace, and the Campanile lift for the lagoon view &mdash; all before the crowds build.</p></div>
+      <div class="card"><h3>The Grand Canal at dusk</h3><p>Vaporetto Line 1 down the world's greatest main street, ridden from a front seat as the palace windows light up.</p></div>
+      <div class="card"><img class="card-img" src="images/venice-rialto.jpg" alt="Produce stalls at the Rialto market" loading="lazy"><h3>Rialto mornings, bacaro evenings</h3><p>The fish and produce market by day; by night, Venice's signature evening &mdash; cicchetti and small wines standing at counters, hopping bar to bar.</p></div>
+      <div class="card"><img class="card-img" src="images/venice-backstreet.jpg" alt="A quiet Cannaregio canal with moored boats along the Fondamenta della Misericordia" loading="lazy"><h3>Get lost on purpose</h3><p>The backstreets of Cannaregio and Castello, where actual Venetians live &mdash; plus the full gondola if it appeals, or the &euro;2 traghetto crossing, the local's version.</p></div>
+      <div class="card"><img class="card-img" src="images/venice-burano.jpg" alt="Burano's brightly painted houses along a canal" loading="lazy"><h3>The island day</h3><p>Murano's glass furnaces and Burano &mdash; the rainbow-painted fishing village, photogenic beyond reason &mdash; by vaporetto across the lagoon.</p></div>
+      <div class="card"><img class="card-img" src="images/venice-zattere.jpg" alt="A gondola passing Santa Maria della Salute at sunset" loading="lazy"><h3>Art &amp; sunsets</h3><p>The Accademia or the Peggy Guggenheim Collection, a La Fenice tour &mdash; and sunset on the Zattere promenade, spritz in hand.</p></div>
+    </div>
+    <p>Vaporetto passes and lines: <a href="https://avm.avmspa.it/en" target="_blank" rel="noopener">AVM/Actv &mdash; Venice public transport</a>. We'll buy multi-day passes on arrival.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="milan">
+  <div class="wrap">
+    <h2>Milan &mdash; one grand farewell</h2>
+    <p class="lead">A working fashion-and-finance city with a handful of world-class sights &mdash; exactly right for one strong final evening and a calm morning before the airport express. No train-to-plane sprints on this trip.</p>
+    <div class="photo"><img src="images/milan.jpg" alt="Among the marble spires on the Milan Duomo rooftop, looking down over the piazza and city" loading="lazy"></div>
+    <div class="cards">
+      <div class="card"><h3>The Duomo rooftop</h3><p>Take the lift and walk among the marble spires in late-afternoon light &mdash; the single best thing to do with two hours in Milan. <a href="https://www.duomomilano.it/en/" target="_blank" rel="noopener">Official site &amp; tickets</a>.</p></div>
+      <div class="card"><img class="card-img" src="images/milan-galleria.jpg" alt="The glass dome and arcades inside the Galleria Vittorio Emanuele II" loading="lazy"><h3>Galleria &amp; aperitivo</h3><p>The 19th-century glass arcade beside the cathedral, then aperitivo with a view of it &mdash; or along the Navigli canals if energy remains.</p></div>
+      <div class="card"><img class="card-img" src="images/milan-cenacolo.jpg" alt="Leonardo da Vinci's Last Supper" loading="lazy"><h3>The Last Supper, if we're lucky</h3><p>Leonardo's masterpiece must be booked weeks ahead &mdash; if we secure slots, it's the best fifteen minutes in the city.</p></div>
+      <div class="card"><img class="card-img" src="images/milan-navigli.jpg" alt="The Naviglio Grande canal at dusk, lined with lit cafés" loading="lazy"><h3>Brera farewell dinner</h3><p>Cobbled lanes and galleries, and the trip's last table &mdash; or the Navigli canal-side aperitivo scene. Next morning: coffee, a short stroll, and the 50-minute Malpensa Express.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Good questions, honest answers</h2>
+    <details>
+      <summary>How much walking is involved?</summary>
+      <p>Moderate, and always at our own pace. Villages like Varenna and Venice are strolling places, not hiking places &mdash; cobbles and the occasional bridge or slope (Varenna's station is a 10-minute downhill walk to the water, with taxis available for bags). Cable cars and lifts do the climbing wherever there's a view to reach, and every day has café stops built in.</p>
+    </details>
+    <details>
+      <summary>Aren't all those trains tiring?</summary>
+      <p>The opposite &mdash; they're the restful part. Seats are reserved on every long leg, bags stay with us (no check-ins, no carousels), there's food and coffee on board or at hand, and the two longest days are the ones with the best views. The only luggage moment of any note is one escalator-and-platform change in Milan.</p>
+    </details>
+    <details>
+      <summary>What about language and money?</summary>
+      <p>English works easily everywhere we're going. Cards are accepted everywhere in all three countries &mdash; no one needs to carry meaningful cash. Switzerland uses francs for our ~24 hours there, but cards cover it.</p>
+    </details>
+    <details>
+      <summary>What's the weather like in September?</summary>
+      <p>The sweet spot: mild and mostly settled, lakes still warm from summer, crowds thinning. Think light layers &mdash; a warm layer for the Bernina summit (2,253&nbsp;m, where there's permanent snow in view) and a light rain jacket, but valley and lake days are typically shirt-sleeve weather.</p>
+    </details>
+    <details>
+      <summary>Didn't Venice introduce a tourist entry fee?</summary>
+      <p>Yes &mdash; for <em>day-trippers</em> on selected dates. Overnight guests like us are exempt; there's just a simple free pre-registration (the hotel helps with it). Nothing to worry about &mdash; we'll handle it.</p>
+    </details>
+    <details>
+      <summary>What still needs to be confirmed?</summary>
+      <p>Exact 2027 train times (the morning Bernina departure especially), the Lindau car-return branch and its opening hours, and seat reservations once dates are fixed. None of it changes the shape of the trip &mdash; and none of it is anyone's job but X's.</p>
+    </details>
+    <p style="margin-top:26px">Useful official links: <a href="https://www.rhb.ch/en/panoramic-journeys/bernina-express" target="_blank" rel="noopener">Bernina Express</a> &middot; <a href="https://www.hohenschwangau.de/en/" target="_blank" rel="noopener">Neuschwanstein ticket centre</a> &middot; <a href="https://avm.avmspa.it/en" target="_blank" rel="noopener">Venice vaporetto</a> &middot; <a href="https://www.villacarlotta.it/en/" target="_blank" rel="noopener">Villa Carlotta</a> &middot; <a href="https://www.duomomilano.it/en/" target="_blank" rel="noopener">Milan Duomo</a> &middot; <a href="https://www.sbb.ch/en" target="_blank" rel="noopener">SBB (Swiss rail)</a> &middot; <a href="https://www.trenitalia.com" target="_blank" rel="noopener">Trenitalia</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><a href="#top">Back to top &uarr;</a></p>
+    <details class="credits">
+      <summary>Photo credits &mdash; all photographs via Wikimedia Commons under Creative Commons licenses</summary>
+      <ul>
+        <li><a href="https://commons.wikimedia.org/wiki/File:RhB_Ge_4-4_II_614_Glacier_Express_on_Landwasser_Viaduct.jpg" target="_blank" rel="noopener">Hero: Landwasser Viaduct</a> &mdash; Kabelleger / David Gubler, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Frauenkirche_and_Neues_Rathaus_Munich_March_2013.JPG" target="_blank" rel="noopener">Munich old town</a> &mdash; Martin Falbisoner, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:M%C3%BCnchner_Viktualienmarkt_-_Verkaufsstand_mit_Fr%C3%BCchten.jpg" target="_blank" rel="noopener">Viktualienmarkt</a> &mdash; Jan Czeczotka, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Munich_-_Hofbr%C3%A4uhaus_am_Platzl_-_0778.jpg" target="_blank" rel="noopener">Hofbr&auml;uhaus</a> &mdash; Jorge Royan, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Eisbach_die_Welle_Surfer.JPG" target="_blank" rel="noopener">Eisbach surfer</a> &mdash; Usien, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Fr%C3%BChling_in_den_Allg%C3%A4uer_Hochalpen.jpg" target="_blank" rel="noopener">Allg&auml;u meadow</a> &mdash; Zwilli007, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Rettenberg,_OA_-_An_der_Halde_-_Rettenberg_v_N,_Gr%C3%BCnten_01.jpg" target="_blank" rel="noopener">Rettenberg &amp; Gr&uuml;nten</a> &mdash; Flodur63, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Breitachklamm_11072015_(Foto_Hilarmont)_(110).jpg" target="_blank" rel="noopener">Breitachklamm</a> &mdash; Hilarmont, CC BY-SA 3.0 de</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Immenstadt_-_Gr_Alpsee_v_N,_B%C3%BChl_a_Alpsee.JPG" target="_blank" rel="noopener">Gro&szlig;er Alpsee</a> &mdash; Flodur63, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Neuschwanstein_Castle_from_Marienbr%C3%BCcke,_2011_May.jpg" target="_blank" rel="noopener">Neuschwanstein</a> &mdash; Ximonic / Simo R&auml;s&auml;nen, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:20221020_Leuchtturm_Lindau_05.jpg" target="_blank" rel="noopener">Lindau harbor</a> &mdash; Flocci Nivis, CC BY 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Stadt_Chur.jpg" target="_blank" rel="noopener">Chur town</a> &mdash; Marketing htwchur, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Chur_-_GR_-_Altstadt.jpg" target="_blank" rel="noopener">Chur Altstadt</a> &mdash; Wladyslaw, CC BY-SA 3.0 de</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Chur-04-Kathedrale_Mariae_Himmelfahrt-2006-gje.jpg" target="_blank" rel="noopener">Chur Cathedral</a> &mdash; Gerd Eichmann, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:RhB_ABe_4-4_III_mit_Bernina-Express_am_Lago_Bianco.jpg" target="_blank" rel="noopener">Lago Bianco</a> &mdash; Kabelleger / David Gubler, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:RhB_Ge_4-4_III_UNESCO_Weltkulturerbe_auf_Landwasserviadukt.jpg" target="_blank" rel="noopener">Landwasser Viaduct (card)</a> &mdash; Kabelleger / David Gubler, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Morteratschgletscher_2007_Piz_Pal%C3%BC_Bellavista_Piz_Bernina_Piz_Morteratsch.jpg" target="_blank" rel="noopener">Morteratsch Glacier</a> &mdash; Kurt Ritschard, CC BY-SA 2.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Kreisviadukt_von_Brusio._2021-02-28_15-56-28.jpg" target="_blank" rel="noopener">Brusio spiral viaduct</a> &mdash; Shesmax, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Puschlav_seen_from_Alp_Gr%C3%BCm_Poschiavo_2022-09-27_01.jpg" target="_blank" rel="noopener">Alp Gr&uuml;m view</a> &mdash; Leonhard Lenz, CC0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:20160623_Varenna_05.jpg" target="_blank" rel="noopener">Varenna at dusk</a> &mdash; Pomptidom, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Bellagio,_Lake_Como,_Italy_(51180622244).jpg" target="_blank" rel="noopener">Bellagio</a> &mdash; Ray in Manila, CC BY 2.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:490VarennaParcoMonastero.JPG" target="_blank" rel="noopener">Villa Monastero</a> &mdash; Geobia, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Castillo_de_Vezio,_Varenna,_Italia,_2016-06-25,_DD_01.jpg" target="_blank" rel="noopener">Castello di Vezio</a> &mdash; Diego Delso, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Varenna_lungolago.jpg" target="_blank" rel="noopener">Varenna lakeside walk</a> &mdash; BeppeViews, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Terrazzamenti_in_Valtelina.JPG" target="_blank" rel="noopener">Valtellina vineyards</a> &mdash; Salento81, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Gondola_on_the_Grand_Canal,_Venice,_Italy.jpg" target="_blank" rel="noopener">Grand Canal</a> &mdash; Peter K Burian, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Venezia_Basilica_di_San_Marco_Fassade_1.jpg" target="_blank" rel="noopener">St Mark's Basilica</a> &mdash; Zairon, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Venezia-_Rialto_market_-_50336366728.jpg" target="_blank" rel="noopener">Rialto market</a> &mdash; Jorge Franganillo, CC BY 2.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Fondamenta_della_Misericordia_(Venice).jpg" target="_blank" rel="noopener">Cannaregio canal</a> &mdash; Didier Descouens, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Burano_-_canal_and_colourful_houses_(35262836603).jpg" target="_blank" rel="noopener">Burano</a> &mdash; Jorge Franganillo, CC BY 2.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Sunset-Gondola_(boat)-Santa_Maria_della_Salute-Venice.jpg" target="_blank" rel="noopener">Salute at sunset</a> &mdash; Yair Haklai, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:20110724_Milan_Cathedral_5350.jpg" target="_blank" rel="noopener">Duomo rooftop</a> &mdash; Jakub Ha&#322;un, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Galleria_Vittorio_Emanuele_II_(Milano).jpg" target="_blank" rel="noopener">Galleria</a> &mdash; Valllentina, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_(1452-1519)_-_The_Last_Supper_(1495-1498).jpg" target="_blank" rel="noopener">The Last Supper</a> &mdash; Leonardo da Vinci, public domain</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Sunset_On_Naviglio_Grande_(248958685).jpeg" target="_blank" rel="noopener">Naviglio Grande</a> &mdash; Marco Montagna, CC BY-SA 3.0</li>
+      </ul>
+    </details>
+  </div>
+</footer>
+
+<div class="lb" id="lb" aria-modal="true" role="dialog">
+  <button class="close" aria-label="Close">&times;</button>
+  <button class="prev" aria-label="Previous image">&#8249;</button>
+  <button class="next" aria-label="Next image">&#8250;</button>
+  <img alt="">
+  <div class="cap"></div>
+  <div class="cnt"></div>
+</div>
+
+<script>
+(function(){
+  var lb=document.getElementById('lb'),
+      lbImg=lb.querySelector('img'),
+      lbCap=lb.querySelector('.cap'),
+      lbCnt=lb.querySelector('.cnt'),
+      group=[],idx=0;
+
+  function items(section){
+    return Array.prototype.slice.call(section.querySelectorAll('.photo img, .card-img'));
+  }
+  function show(i){
+    idx=(i+group.length)%group.length;
+    var el=group[idx];
+    lbImg.src=el.getAttribute('src');
+    lbImg.alt=el.getAttribute('alt')||'';
+    lbCap.textContent=el.getAttribute('data-cap')||el.getAttribute('alt')||'';
+    lbCnt.textContent=(idx+1)+' / '+group.length;
+  }
+  function open(section,el){
+    group=items(section);
+    show(group.indexOf(el));
+    lb.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function close(){
+    lb.classList.remove('open');
+    document.body.style.overflow='';
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target;
+    if(t.matches && (t.matches('section .photo img')||t.matches('section .card-img'))){
+      open(t.closest('section'),t);
+    }
+  });
+  lb.querySelector('.close').addEventListener('click',close);
+  lb.querySelector('.prev').addEventListener('click',function(){show(idx-1)});
+  lb.querySelector('.next').addEventListener('click',function(){show(idx+1)});
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')close();
+    if(e.key==='ArrowLeft')show(idx-1);
+    if(e.key==='ArrowRight')show(idx+1);
+  });
+  var tx=null;
+  lb.addEventListener('touchstart',function(e){tx=e.changedTouches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){
+    if(tx===null)return;
+    var dx=e.changedTouches[0].clientX-tx;tx=null;
+    if(dx>45)show(idx-1); else if(dx<-45)show(idx+1);
+  },{passive:true});
+})();
+
+/* Draw the route on the map as it scrolls into view */
+(function(){
+  var svg=document.querySelector('.realmap svg');
+  if(!svg||!('IntersectionObserver' in window))return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+
+  var legs=Array.prototype.slice.call(svg.querySelectorAll('path.leg')),
+      steps=[],delay=0;
+  legs.forEach(function(leg){
+    var halo=leg.previousElementSibling;
+    if(!(halo&&halo.classList.contains('halo')))halo=null;
+    var cls=leg.getAttribute('class'),
+        fade=/car|return/.test(cls),
+        len=leg.getTotalLength(),
+        dur=fade?.7:Math.max(.5,len/300);
+    [halo,leg].forEach(function(p){
+      if(!p)return;
+      if(fade&&p===leg){p.style.opacity='0'}
+      else{
+        p.style.strokeDasharray=len;
+        p.style.strokeDashoffset=len;
+      }
+      steps.push({p:p,fade:fade&&p===leg,dur:dur,delay:delay});
+    });
+    delay+=dur*.85;
+  });
+  var finals=Array.prototype.slice.call(svg.querySelectorAll('.stopdot,.hldot,.place'));
+  finals.forEach(function(el){el.style.opacity='0'});
+
+  var io=new IntersectionObserver(function(entries){
+    if(!entries[0].isIntersecting)return;
+    io.disconnect();
+    steps.forEach(function(s){
+      if(s.fade){
+        s.p.style.transition='opacity '+s.dur+'s ease '+s.delay+'s';
+        s.p.style.opacity='';
+      }else{
+        s.p.style.transition='stroke-dashoffset '+s.dur+'s ease-in-out '+s.delay+'s';
+        s.p.style.strokeDashoffset='0';
+      }
+    });
+    finals.forEach(function(el){
+      el.style.transition='opacity .7s ease '+(delay+.1)+'s';
+      el.style.opacity='';
+    });
+  },{threshold:.35});
+  io.observe(svg);
+})();
+</script>
+</body>
+</html>
