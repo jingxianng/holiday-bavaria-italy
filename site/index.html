@@ -104,11 +104,7 @@
   .realmap img{width:100%;display:block}
   .realmap svg{position:absolute;inset:0;width:100%;height:100%}
   .halo{fill:none;stroke:#fff;stroke-width:9;stroke-linecap:round;opacity:.85}
-  .leg{fill:none;stroke-width:4;stroke-linecap:round}
-  .leg.car{stroke:#5c6e7a;stroke-dasharray:3 10}
-  .leg.rail{stroke:#20586a}
-  .leg.bernina{stroke:#c2871f;stroke-width:5}
-  .leg.return{stroke:#fff;stroke-width:2.4;stroke-dasharray:2 9;opacity:.9}
+  .leg{fill:none;stroke:#20586a;stroke-width:4;stroke-linecap:round}
   .stopdot circle{fill:#fff;stroke:#20586a;stroke-width:4}
   .place text{
     font-family:var(--serif);font-size:28px;font-weight:bold;fill:#1c2b33;
@@ -116,12 +112,6 @@
   }
   .mapattr{font-size:.72rem;color:var(--ink-soft);text-align:right;margin:6px 2px 0}
   .mapattr a{color:var(--ink-soft)}
-  .maplegend{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;margin-top:10px;font-size:.82rem;color:var(--ink-soft)}
-  .maplegend i{display:inline-block;width:26px;height:0;border-top:3px solid;vertical-align:middle;margin-right:6px}
-  .maplegend .l-car{border-top-style:dashed;border-color:#8a97a0}
-  .maplegend .l-rail{border-color:var(--alpine)}
-  .maplegend .l-bern{border-color:var(--gold);border-top-width:4px}
-  .maplegend .l-ret{border-top-style:dotted;border-color:#b8b0a1}
 
   /* sections */
   section{padding:64px 0 30px}
@@ -238,7 +228,7 @@
   <div class="wrap">
     <div class="kicker">September 2027 &middot; Bavaria &middot; Switzerland &middot; Italy</div>
     <h1>The Alps, Slowly</h1>
-    <p class="sub">Family days in the Bavarian Alps with Dr.&nbsp;H &mdash; then the highest railway over the Alps, four slow days on Italy's most beautiful lake, three days in the world's most extraordinary city, and one grand farewell in Milan.</p>
+    <p class="sub">Family days in the Bavarian Alps with Dr.&nbsp;H &mdash; then the highest railway over the Alps, four slow days on an Italian lake the tourists haven't found, three days in the world's most extraordinary city, and one grand farewell in Milan.</p>
     <p class="who">Mum &amp; Pa fly in from Singapore &middot; X &amp; E from Philadelphia &middot; ~12 nights, early&ndash;mid September</p>
   </div>
 </header>
@@ -250,7 +240,7 @@
     <a href="#rettenberg">Rettenberg</a>
     <a href="#chur">Chur</a>
     <a href="#bernina">Bernina</a>
-    <a href="#varenna">Varenna</a>
+    <a href="#iseo">Iseo</a>
     <a href="#venice">Venice</a>
     <a href="#milan">Milan</a>
     <a href="#faq">FAQ</a>
@@ -265,7 +255,7 @@
       <div class="stop"><div class="node"><div class="dot"></div><div class="name">Rettenberg</div><div class="nights">2&ndash;3 nights</div></div><div class="link-arm"></div></div>
       <div class="stop"><div class="node"><div class="dot"></div><div class="name">Chur</div><div class="nights">1 night</div></div><div class="link-arm"></div></div>
       <div class="stop"><div class="node"><div class="dot"></div><div class="name">Bernina Railway</div><div class="nights">day crossing</div></div><div class="link-arm"></div></div>
-      <div class="stop"><div class="node"><div class="dot"></div><div class="name">Varenna</div><div class="nights">4 nights</div></div><div class="link-arm"></div></div>
+      <div class="stop"><div class="node"><div class="dot"></div><div class="name">Iseo</div><div class="nights">4 nights</div></div><div class="link-arm"></div></div>
       <div class="stop"><div class="node"><div class="dot"></div><div class="name">Venice</div><div class="nights">3 nights</div></div><div class="link-arm"></div></div>
       <div class="stop"><div class="node"><div class="dot"></div><div class="name">Milan</div><div class="nights">1 night</div></div></div>
     </div>
@@ -274,31 +264,31 @@
       <div class="realmap">
         <img src="images/map-base.jpg" alt="Terrain map of the Alps between Munich and northern Italy" loading="lazy">
         <svg viewBox="0 0 820 884" role="img" aria-label="The route from Munich through the Alps to Venice and Milan drawn on the map">
-          <!-- car leg: Munich → Rettenberg → Lindau -->
+          <!-- Munich → Rettenberg → Lindau -->
           <path class="halo" d="M571,76 C500,130 390,205 338,231 C300,238 258,238 227,236"/>
-          <path class="leg car" d="M571,76 C500,130 390,205 338,231 C300,238 258,238 227,236"/>
-          <!-- train: Lindau → Chur (Rhine valley) -->
+          <path class="leg" d="M571,76 C500,130 390,205 338,231 C300,238 258,238 227,236"/>
+          <!-- Lindau → Chur (Rhine valley) -->
           <path class="halo" d="M227,236 C196,280 186,350 199,423"/>
-          <path class="leg rail" d="M227,236 C196,280 186,350 199,423"/>
-          <!-- Bernina: Chur → Tirano (via Albula & the pass) -->
+          <path class="leg" d="M227,236 C196,280 186,350 199,423"/>
+          <!-- Chur → Tirano (via Albula & the Bernina pass) -->
           <path class="halo" d="M199,423 C262,462 330,505 315,590"/>
-          <path class="leg bernina" d="M199,423 C262,462 330,505 315,590"/>
-          <!-- Tirano → Varenna (Valtellina) -->
-          <path class="halo" d="M315,590 C255,628 190,628 154,645"/>
-          <path class="leg rail" d="M315,590 C255,628 190,628 154,645"/>
-          <!-- Varenna → Milan → Venice -->
-          <path class="halo" d="M154,645 C142,692 130,742 137,787"/>
-          <path class="leg rail" d="M154,645 C142,692 130,742 137,787"/>
-          <path class="halo" d="M137,787 C350,758 550,768 710,793"/>
-          <path class="leg rail" d="M137,787 C350,758 550,768 710,793"/>
-          <!-- return Venice → Milan (fly home) -->
-          <path class="leg return" d="M710,803 C545,832 300,838 145,801"/>
+          <path class="leg" d="M199,423 C262,462 330,505 315,590"/>
+          <!-- Tirano → Iseo (Aprica & the Val Camonica) -->
+          <path class="halo" d="M315,590 C295,650 275,698 293,734"/>
+          <path class="leg" d="M315,590 C295,650 275,698 293,734"/>
+          <!-- Iseo → Brescia → Venice -->
+          <path class="halo" d="M293,734 C300,758 306,766 324,766 C460,786 570,772 710,793"/>
+          <path class="leg" d="M293,734 C300,758 306,766 324,766 C460,786 570,772 710,793"/>
+          <!-- Venice → Milan (the farewell night, then fly home) -->
+          <path class="halo" d="M710,793 C545,830 300,835 137,787"/>
+          <path class="leg" d="M710,793 C545,830 300,835 137,787"/>
           <!-- stops -->
           <g class="stopdot">
             <circle cx="571" cy="76" r="9"/><circle cx="338" cy="231" r="9"/>
             <circle cx="227" cy="236" r="7"/><circle cx="199" cy="423" r="9"/>
-            <circle cx="315" cy="590" r="7"/><circle cx="154" cy="645" r="9"/>
-            <circle cx="137" cy="787" r="9"/><circle cx="710" cy="793" r="9"/>
+            <circle cx="315" cy="590" r="7"/><circle cx="293" cy="734" r="9"/>
+            <circle cx="324" cy="766" r="7"/><circle cx="710" cy="793" r="9"/>
+            <circle cx="137" cy="787" r="9"/>
           </g>
           <!-- labels -->
           <g class="place">
@@ -307,17 +297,12 @@
             <text x="215" y="222" text-anchor="end">Lindau</text>
             <text x="216" y="430">Chur</text>
             <text x="330" y="597">Tirano</text>
-            <text x="140" y="633" text-anchor="end">Varenna</text>
+            <text x="278" y="728" text-anchor="end">Iseo</text>
+            <text x="340" y="778">Brescia</text>
             <text x="128" y="815" text-anchor="end">Milan</text>
             <text x="700" y="778" text-anchor="end">Venice</text>
           </g>
         </svg>
-      </div>
-      <div class="maplegend">
-        <span><i class="l-car"></i> car (Bavaria only)</span>
-        <span><i class="l-rail"></i> train</span>
-        <span><i class="l-bern"></i> Bernina panoramic</span>
-        <span><i class="l-ret"></i> back to Milan &amp; fly home</span>
       </div>
       <p class="mapattr">Map: &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors, SRTM &middot; style: &copy; <a href="https://opentopomap.org" target="_blank" rel="noopener">OpenTopoMap</a> (CC-BY-SA)</p>
     </div>
@@ -326,8 +311,8 @@
 
 <section id="travel">
   <div class="wrap">
-    <h2>How we'll travel: one car, then trains all the way</h2>
-    <p class="lead">One car for Bavaria only &mdash; after Lindau, nobody drives again. Everything else is trains and lake ferries: reserved seats, bags beside us, no hop longer than half a day except two longer, scenic rail days. This is a slow trip on purpose.</p>
+    <h2>How we'll travel: slowly, on purpose</h2>
+    <p class="lead">We self-drive only in Bavaria; from there it's trains, lake ferries, and one scenic mountain transfer &mdash; reserved seats, bags beside us, no hop longer than half a day except the two rail days that are attractions in themselves.</p>
 
     <div class="timeline">
       <div class="tl">
@@ -349,18 +334,18 @@
         <p>An evening stroll and a good dinner in Switzerland's oldest town.</p>
       </div>
       <div class="tl">
-        <h3>The Bernina Railway: Chur &rarr; Tirano &rarr; Varenna</h3>
-        <div class="dur">Morning panoramic train + short lunch stop + ~1&frac14; h regional</div>
-        <details><summary>Details</summary><p>Reserved panoramic seats over the Alps, lunch in Tirano, then a lakeside train to Varenna by mid-afternoon.</p></details>
+        <h3>The Bernina Railway: Chur &rarr; Tirano &rarr; Iseo</h3>
+        <div class="dur">Morning panoramic train + short lunch stop + ~2 h scenic drive</div>
+        <details><summary>Details</summary><p>Reserved panoramic seats over the Alps, lunch in Tirano, then a private driver over the Aprica Pass and down the Val Camonica &mdash; lakefront by mid-afternoon.</p></details>
       </div>
       <div class="tl stay">
-        <h3>Varenna, Lake Como &mdash; 4 nights</h3>
-        <p>The slow middle of the trip. Ferries, gardens, long lunches.</p>
+        <h3>Iseo, Lago d'Iseo &mdash; 4 nights</h3>
+        <p>The slow middle of the trip. Ferries, wine country, long lunches.</p>
       </div>
       <div class="tl">
-        <h3>Varenna &rarr; Venice</h3>
-        <div class="dur">~4 hours door to door</div>
-        <details><summary>Details</summary><p>Regional train to Milan, one platform change, then the fast Frecciarossa to a station that opens directly onto the Grand Canal.</p></details>
+        <h3>Iseo &rarr; Venice</h3>
+        <div class="dur">~3 hours door to door</div>
+        <details><summary>Details</summary><p>A regional train through the hills to Brescia, one easy change, then the fast Frecciarossa to a station that opens directly onto the Grand Canal.</p></details>
       </div>
       <div class="tl stay">
         <h3>Venice &mdash; 3 nights</h3>
@@ -373,7 +358,7 @@
       </div>
     </div>
 
-    <details class="note"><summary>Booking notes (the boring bits, handled)</summary><p>The car is a domestic German one-way (Munich&nbsp;&rarr;&nbsp;Lindau) &mdash; the cheap kind; panoramic-train seats get reserved the moment dates are fixed, since September fills up; Swiss tickets via SBB, Italian via Trenitalia. Where exact times matter &mdash; the Lindau car return, the morning train &mdash; we'll confirm them before anything is booked. Nothing here requires anyone else to plan anything.</p></details>
+    <details class="note"><summary>Booking notes (the boring bits, handled)</summary><p>The car is a domestic German one-way (Munich&nbsp;&rarr;&nbsp;Lindau) &mdash; the cheap kind; panoramic-train seats get reserved the moment dates are fixed, since September fills up; the Tirano&nbsp;&rarr;&nbsp;Iseo drive is a licensed private car, booked ahead; Franciacorta cellar visits get reserved early too &mdash; September is harvest. Swiss tickets via SBB, Italian via Trenitalia. Where exact times matter &mdash; the Lindau car return, the morning train &mdash; we'll confirm them before anything is booked. Nothing here requires anyone else to plan anything.</p></details>
   </div>
 </section>
 
@@ -435,7 +420,7 @@
     <div class="cards">
       <div class="card"><img class="card-img" src="images/bernina.jpg" alt="A red Rhaetian Railway train curving across the tall stone arches of the Landwasser Viaduct" loading="lazy"><h3>Over the Alps</h3><p>The Landwasser Viaduct, the Albula spirals that corkscrew <em>inside</em> the mountain, and the 2,253&nbsp;m summit beside the milky-turquoise Lago Bianco.</p></div>
       <div class="card"><img class="card-img" src="images/bernina-brusio.jpg" alt="A red train crossing the Brusio circular viaduct, its track looping beneath" loading="lazy"><h3>Down into Italy</h3><p>The balcony view from Alp Gr&uuml;m, the Brusio viaduct where the train loops over itself, and lunch in Tirano &mdash; pizzoccheri, of course.</p></div>
-      <div class="card"><img class="card-img" src="images/bernina-alpgruem.jpg" alt="The view from Alp Grüm down the green Poschiavo valley toward its lake" loading="lazy"><h3>Then a short lakeside hop</h3><p>An easy regional train (~1&frac14; h) along Lake Como's eastern shore brings us to Varenna by mid-afternoon.</p></div>
+      <div class="card"><img class="card-img" src="images/bernina-alpgruem.jpg" alt="The view from Alp Grüm down the green Poschiavo valley toward its lake" loading="lazy"><h3>Then down to the lake</h3><p>A private driver meets us in Tirano: over the Aprica Pass and down the Val Camonica, arriving on the Iseo lakefront by mid-afternoon (~2 h, scenic the whole way).</p></div>
     </div>
     <p>Official line information: <a href="https://www.rhb.ch/en/panoramic-journeys/bernina-express" target="_blank" rel="noopener">Bernina Express &mdash; Rhaetian Railway</a>.</p>
   </div>
@@ -443,17 +428,17 @@
 
 <div class="divider"></div>
 
-<section id="varenna">
+<section id="iseo">
   <div class="wrap">
-    <h2>Varenna, Lake Como &mdash; the slow middle</h2>
-    <p class="lead">A small fishing village of pastel houses on the quiet eastern shore &mdash; the calm alternative to famous Bellagio, which sits just across the water. Four nights in one place, unpacked, with the lake ferries as our sightseeing.</p>
-    <div class="photo"><img src="images/varenna.jpg" alt="Varenna's pastel houses stacked above the Lake Como shoreline at dusk" loading="lazy"></div>
+    <h2>Iseo, Lago d'Iseo &mdash; the slow middle</h2>
+    <p class="lead">The smallest and least-touristed of the great Lombard lakes, between the Franciacorta wine hills and real mountains, with the green pyramid of Monte Isola rising from its middle. You hear Italian at dinner here. Four nights in the little lake capital &mdash; arcaded piazzas, a lakefront passeggiata &mdash; unpacked, with the ferries as our sightseeing.</p>
+    <div class="photo"><img src="images/iseo.jpg" alt="Iseo town and its harbor from the air, turquoise shallows in front and green mountains behind" loading="lazy"></div>
     <div class="cards">
-      <div class="card"><img class="card-img" src="images/varenna-bellagio.jpg" alt="Bellagio's waterfront seen from Lake Como" loading="lazy"><h3>The ferry triangle</h3><p>Varenna &harr; Bellagio &harr; Menaggio by lake ferry: visit the famous villages without sleeping in their crowds. The mid-lake ferries are the region's transport <em>and</em> its best sightseeing.</p></div>
-      <div class="card"><img class="card-img" src="images/varenna-monastero.jpg" alt="Villa Monastero's lakefront garden pavilion over the water" loading="lazy"><h3>Villas &amp; gardens</h3><p>Villa Monastero's kilometre of lakefront botanical gardens right in Varenna, and the grand showpiece <a href="https://www.villacarlotta.it/en/" target="_blank" rel="noopener">Villa Carlotta</a> across the water in Tremezzo.</p></div>
-      <div class="card"><img class="card-img" src="images/varenna-vezio.jpg" alt="The ruin of Castello di Vezio on its promontory above Lake Como" loading="lazy"><h3>Castello di Vezio</h3><p>The ruined castle above the village &mdash; a short uphill walk to falconry displays and the best panorama of the lake's three branches.</p></div>
-      <div class="card"><img class="card-img" src="images/varenna-passeggiata.jpg" alt="The railed lakeside walkway along Varenna's shore" loading="lazy"><h3>Village pleasures</h3><p>The Lovers' Walk along the cliffside shore, the foaming little Fiumelatte &mdash; one of Italy's shortest rivers &mdash; market mornings, a swim from the lido, perhaps a private boat hour on the lake.</p></div>
-      <div class="card"><img class="card-img" src="images/varenna-vigneti.jpg" alt="Terraced Valtellina vineyards climbing the valley walls" loading="lazy"><h3>At the table</h3><p>Lake fish &mdash; missoltini, lavarello &mdash; and Valtellina wines from the terraced vineyards just up the valley.</p></div>
+      <div class="card"><img class="card-img" src="images/iseo-monteisola.jpg" alt="Monte Isola rising from Lago d'Iseo, the village of Peschiera Maraglio at its foot" loading="lazy"><h3>Monte Isola &mdash; the highlight</h3><p>A short ferry to car-free Peschiera Maraglio on Europe's largest lake island &mdash; a real fishing village, not a stage set. Bikes around the island (~9 km), or up to the Madonna della Ceriola sanctuary for the best panorama on the lake.</p></div>
+      <div class="card"><img class="card-img" src="images/iseo-franciacorta.jpg" alt="Vine rows in Franciacorta with the hilltop Santissima church of Gussago behind" loading="lazy"><h3>Franciacorta</h3><p>Italy's champagne-method wine country begins directly behind town. A cellar visit &mdash; Ca' del Bosco, or Berlucchi, where the method began &mdash; and a long vineyard lunch. September is harvest season.</p></div>
+      <div class="card"><img class="card-img" src="images/iseo-lovere.jpg" alt="Dawn over the upper lake at Lovere, a small boat on still golden water" loading="lazy"><h3>The ferry north</h3><p>The full-lake boat past the sheer B&ouml;gn cliffs to Lovere &mdash; one of Italy's "most beautiful villages" &mdash; and Pisogne, where Romanino's fresco cycle is called the poor man's Sistine Chapel.</p></div>
+      <div class="card"><img class="card-img" src="images/iseo-torbiere.jpg" alt="Reed beds and still lagoons of the Torbiere del Sebino nature reserve" loading="lazy"><h3>The Torbiere at golden hour</h3><p>Boardwalks over the lily-pad lagoons of the Torbiere del Sebino reserve, just behind town &mdash; and, if we fancy a bigger outing, the prehistoric rock engravings of the Val Camonica, Italy's first UNESCO site, up the valley.</p></div>
+      <div class="card"><h3>At the table</h3><p>Lake fish &mdash; air-dried sardines from Monte Isola, tinca al forno with polenta &mdash; casoncelli pasta, and Franciacorta bubbles with everything.</p></div>
     </div>
   </div>
 </section>
@@ -500,11 +485,11 @@
     <h2>Good questions, honest answers</h2>
     <details>
       <summary>How much walking is involved?</summary>
-      <p>Moderate, and always at our own pace. Villages like Varenna and Venice are strolling places, not hiking places &mdash; cobbles and the occasional bridge or slope (Varenna's station is a 10-minute downhill walk to the water, with taxis available for bags). Cable cars and lifts do the climbing wherever there's a view to reach, and every day has café stops built in.</p>
+      <p>Moderate, and always at our own pace. Iseo and Venice are strolling places, not hiking places &mdash; flat lakefront promenades, cobbles, the occasional bridge (Iseo's station is a short, level walk from the water). Cable cars and lifts do the climbing wherever there's a view to reach, and every day has café stops built in.</p>
     </details>
     <details>
       <summary>Aren't all those trains tiring?</summary>
-      <p>The opposite &mdash; they're the restful part. Seats are reserved on every long leg, bags stay with us (no check-ins, no carousels), there's food and coffee on board or at hand, and the two longest days are the ones with the best views. The only luggage moment of any note is one escalator-and-platform change in Milan.</p>
+      <p>The opposite &mdash; they're the restful part. Seats are reserved on every long leg, bags stay with us (no check-ins, no carousels), there's food and coffee on board or at hand, and the two longest days are the ones with the best views. The only luggage moment of any note is one easy platform change in compact Brescia station.</p>
     </details>
     <details>
       <summary>What about language and money?</summary>
@@ -520,9 +505,9 @@
     </details>
     <details>
       <summary>What still needs to be confirmed?</summary>
-      <p>Exact 2027 train times (the morning Bernina departure especially), the Lindau car-return branch and its opening hours, and seat reservations once dates are fixed. None of it changes the shape of the trip &mdash; and none of it is anyone's job but X's.</p>
+      <p>Exact 2027 train times (the morning Bernina departure especially), the Lindau car-return branch and its opening hours, the Tirano&nbsp;&rarr;&nbsp;Iseo driver, and seat reservations once dates are fixed. None of it changes the shape of the trip &mdash; and none of it is anyone's job but X's.</p>
     </details>
-    <p style="margin-top:26px">Useful official links: <a href="https://www.rhb.ch/en/panoramic-journeys/bernina-express" target="_blank" rel="noopener">Bernina Express</a> &middot; <a href="https://www.hohenschwangau.de/en/" target="_blank" rel="noopener">Neuschwanstein ticket centre</a> &middot; <a href="https://avm.avmspa.it/en" target="_blank" rel="noopener">Venice vaporetto</a> &middot; <a href="https://www.villacarlotta.it/en/" target="_blank" rel="noopener">Villa Carlotta</a> &middot; <a href="https://www.duomomilano.it/en/" target="_blank" rel="noopener">Milan Duomo</a> &middot; <a href="https://www.sbb.ch/en" target="_blank" rel="noopener">SBB (Swiss rail)</a> &middot; <a href="https://www.trenitalia.com" target="_blank" rel="noopener">Trenitalia</a></p>
+    <p style="margin-top:26px">Useful official links: <a href="https://www.rhb.ch/en/panoramic-journeys/bernina-express" target="_blank" rel="noopener">Bernina Express</a> &middot; <a href="https://www.hohenschwangau.de/en/" target="_blank" rel="noopener">Neuschwanstein ticket centre</a> &middot; <a href="https://avm.avmspa.it/en" target="_blank" rel="noopener">Venice vaporetto</a> &middot; <a href="https://www.navigazionelagoiseo.it/" target="_blank" rel="noopener">Lake Iseo ferries</a> &middot; <a href="https://www.duomomilano.it/en/" target="_blank" rel="noopener">Milan Duomo</a> &middot; <a href="https://www.sbb.ch/en" target="_blank" rel="noopener">SBB (Swiss rail)</a> &middot; <a href="https://www.trenitalia.com" target="_blank" rel="noopener">Trenitalia</a></p>
   </div>
 </section>
 
@@ -550,12 +535,11 @@
         <li><a href="https://commons.wikimedia.org/wiki/File:RhB_Ge_4-4_III_UNESCO_Weltkulturerbe_auf_Landwasserviadukt.jpg" target="_blank" rel="noopener">Landwasser Viaduct (card)</a> &mdash; Kabelleger / David Gubler, CC BY-SA 3.0</li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Kreisviadukt_von_Brusio._2021-02-28_15-56-28.jpg" target="_blank" rel="noopener">Brusio spiral viaduct</a> &mdash; Shesmax, CC BY-SA 4.0</li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Puschlav_seen_from_Alp_Gr%C3%BCm_Poschiavo_2022-09-27_01.jpg" target="_blank" rel="noopener">Alp Gr&uuml;m view</a> &mdash; Leonhard Lenz, CC0</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:20160623_Varenna_05.jpg" target="_blank" rel="noopener">Varenna at dusk</a> &mdash; Pomptidom, CC BY-SA 4.0</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Bellagio,_Lake_Como,_Italy_(51180622244).jpg" target="_blank" rel="noopener">Bellagio</a> &mdash; Ray in Manila, CC BY 2.0</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:490VarennaParcoMonastero.JPG" target="_blank" rel="noopener">Villa Monastero</a> &mdash; Geobia, CC BY-SA 3.0</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Castillo_de_Vezio,_Varenna,_Italia,_2016-06-25,_DD_01.jpg" target="_blank" rel="noopener">Castello di Vezio</a> &mdash; Diego Delso, CC BY-SA 4.0</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Varenna_lungolago.jpg" target="_blank" rel="noopener">Varenna lakeside walk</a> &mdash; BeppeViews, CC BY-SA 4.0</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Terrazzamenti_in_Valtelina.JPG" target="_blank" rel="noopener">Valtellina vineyards</a> &mdash; Salento81, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Iseo,_2023.jpg" target="_blank" rel="noopener">Iseo from above</a> &mdash; Daniel Reust, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Peschiera_Maraglio_Monte_Isola_1.jpg" target="_blank" rel="noopener">Monte Isola</a> &mdash; Zairon, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Franciacorta,_Vigneto_con_Santissima_di_Gussago.jpg" target="_blank" rel="noopener">Franciacorta vineyard</a> &mdash; Fabio Ingrosso, CC BY 2.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Lovere_Lago_d%27Iseo_di_Mattina_1.jpg" target="_blank" rel="noopener">The lake at dawn, Lovere</a> &mdash; Zairon, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Torbiere_del_Sebino_percorso_sud_13.jpg" target="_blank" rel="noopener">Torbiere del Sebino</a> &mdash; Wolfgang Moroder, CC BY-SA 4.0</li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Gondola_on_the_Grand_Canal,_Venice,_Italy.jpg" target="_blank" rel="noopener">Grand Canal</a> &mdash; Peter K Burian, CC BY-SA 4.0</li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Venezia_Basilica_di_San_Marco_Fassade_1.jpg" target="_blank" rel="noopener">St Mark's Basilica</a> &mdash; Zairon, CC BY-SA 4.0</li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Venezia-_Rialto_market_-_50336366728.jpg" target="_blank" rel="noopener">Rialto market</a> &mdash; Jorge Franganillo, CC BY 2.0</li>

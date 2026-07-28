@@ -1,6 +1,6 @@
 # Family Trip — Destinations & Things to Do
 
-*Companion to the logistics document. Same route order: Munich → Rettenberg (Allgäu) → Chur → Bernina railway → Varenna (Lake Como) → Venice → Milan.*
+*Companion to the logistics document. Same route order: Munich → Rettenberg (Allgäu) → Chur → Bernina railway → Iseo town (Lago d'Iseo) → Venice → Milan.*
 
 ---
 
@@ -14,7 +14,7 @@ The gentle landing after long-haul flights.
 
 ## Rettenberg & the Allgäu (2–3 nights)
 
-Bavaria's alpine dairy country: green foothills, onion-domed churches, and the Alps rising straight ahead. Parents are with their friends; the cyclists ride.
+Bavaria's alpine dairy country: green foothills, onion-domed churches, and the Alps rising straight ahead. Parents are with Dr. H; the cyclists ride.
 
 **For the cyclists (e-bikes rented locally):**
 - **Iller valley ride to Oberstdorf and back** (~50–55 km, flat valley path, mountains in view the whole way) — the signature day. Extend at the turnaround with the **Breitachklamm gorge** walk or a cable car up the **Nebelhorn** or **Fellhorn**.
@@ -50,24 +50,21 @@ A UNESCO World Heritage line and the highest rail crossing of the Alps — glaci
 - **Ospizio Bernina (2,253 m)** — the summit, beside the milky-turquoise **Lago Bianco**.
 - **Alp Grüm** — balcony view down toward Italy.
 - **Brusio circular viaduct** — the train loops over itself descending into the vineyards.
-- Arrival in **Tirano**, Italy — lunch stop; try **pizzoccheri**, the Valtellina buckwheat-pasta dish.
+- Arrival in **Tirano**, Italy — lunch stop; try **pizzoccheri**, the Valtellina buckwheat-pasta dish. Then a scenic private-car transfer over the Aprica Pass and down the Val Camonica to the lake (~2 h).
 
-## Varenna, Lake Como (4 nights)
+## Iseo town, Lago d'Iseo (4 nights)
 
-The quiet eastern-shore alternative to famous Bellagio: a small fishing village of pastel houses, largely car-free, calm in the evenings after day-trippers leave. The base for the slow middle of the trip.
+The smallest and least internationally-touristed of the great Lombard lakes — an S-shaped lake between the Franciacorta wine hills and real mountains, with the green pyramid of Monte Isola rising from its middle. Tourism here is mostly Italian and northern-European; you'll hear Italian at dinner, and prices run well below Como. Base: **Iseo town**, the lake's little capital — arcaded lakefront piazzas, the best restaurants, Friday market, the main ferry pier, and the train station for the onward leg.
 
-- **The ferry triangle** — Varenna ↔ **Bellagio** ↔ **Menaggio** by lake ferry: visit the famous village without sleeping in its crowds. The mid-lake ferries are the region's transport *and* its best sightseeing.
-- **Villa Monastero** (Varenna) — lakefront botanical gardens along a kilometer of shoreline.
-- **Castello di Vezio** — ruined castle above Varenna; short uphill walk, falconry displays, the best panorama of the lake's three branches.
-- **Passeggiata degli Innamorati** ("Lovers' Walk") — the clifftop lakeside promenade into the village.
-- **Villa Carlotta** (Tremezzo, across the water) — the grand villa-and-gardens showpiece, reached by ferry.
-- **Fiumelatte** — one of Italy's shortest rivers, a foaming white cascade, a short walk south.
-- Unstructured day: market morning, long waterfront lunch, optional private boat hire on the lake, swim from the lido.
-- Food: lake fish (missoltini, lavarello), Valtellina wines from the terraced vineyards just up the valley.
+- **Monte Isola day (the highlight):** short ferry to car-free **Peschiera Maraglio** on Europe's largest lake island — a real fishing-and-boatbuilding community, not a stage set. Walk the lakeside lane, rent bikes to circle the island (~9 km), or take the little bus up and walk to the **Madonna della Ceriola** sanctuary on the summit for the best panorama on the lake. Lunch on the island specialty: air-dried lake sardines, or tinca al forno with polenta.
+- **Franciacorta day:** Italy's premier champagne-method sparkling-wine region begins directly behind Iseo town. Cellar visits — **Ca' del Bosco** (the architectural showpiece; book ahead), **Berlucchi** (where the method began in 1961), or small family producers — plus a long vineyard lunch. Book a half-day tour with pickup, or taxi between two wineries; distances are short. September = harvest season.
+- **Ferry-hopping day (northern lake):** the full-lake boat to **Lovere** (one of Italy's "most beautiful villages," with the Accademia Tadini gallery) and **Pisogne** (Romanino's fresco cycle in Santa Maria della Neve — "the poor man's Sistine Chapel"), past the sheer **Bögn** rock walls of the upper lake.
+- **Easy local bits:** the **Torbiere del Sebino** nature reserve just behind town — lily-pad lagoons and boardwalks, lovely at golden hour; lakefront passeggiata and gelato; optional bigger outing to the **Val Camonica rock engravings**, Italy's first UNESCO site — tens of thousands of prehistoric carvings just up the valley.
+- Food notes: lake fish, casoncelli pasta from the Brescia/Bergamo tradition, and Franciacorta bubbles with everything.
 
 ## Venice (3 nights)
 
-The only city of its kind on earth — canals for streets, boats for buses. Crucially: **nobody drives here**, so every visitor moves the same way, on foot and by vaporetto. Three nights means seeing Venice at its best — early mornings and evenings after the day-trippers leave.
+The only city of its kind on earth — canals for streets, boats for buses. Crucially: **nobody drives here**, so every visitor moves the same way, on foot and by vaporetto. Three nights means seeing Venice at its best — early mornings and evenings after the day-trippers leave. (The tourist access fee is for day-trippers only; overnight guests just do a free pre-registration.)
 
 - **Piazza San Marco** — the Basilica's golden mosaics (book ahead), the **Doge's Palace**, and the Campanile lift for the lagoon view. Go early.
 - **Grand Canal by vaporetto Line 1** — the world's greatest main street, best ridden at dusk from a front seat.
@@ -94,4 +91,4 @@ A working fashion-and-finance city with a handful of world-class sights: perfect
 
 ## The trip in one line
 
-Bavarian alps and family time → the highest railway over the Alps → four slow days on Italy's most beautiful lake → three days in the world's most extraordinary city → one grand farewell in Milan.
+Bavarian alps and family time → the highest railway over the Alps → four slow days on an Italian lake the tourists haven't found → three days in the world's most extraordinary city → one grand farewell in Milan.
