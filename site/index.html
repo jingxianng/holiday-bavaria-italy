@@ -85,7 +85,6 @@
   .stop{display:flex;align-items:center}
   .stop .node{text-align:center;min-width:96px;padding:0 6px}
   .stop .dot{width:13px;height:13px;border-radius:50%;background:var(--alpine);margin:0 auto 8px;box-shadow:0 0 0 4px var(--alpine-deep)}
-  .stop.hl .dot{background:var(--gold);box-shadow:0 0 0 4px #b0812f2e}
   .stop .name{font-family:var(--serif);font-size:1.02rem;line-height:1.25}
   .stop .nights{font-size:.8rem;color:var(--ink-soft)}
   .stop .link-arm{width:42px;height:2px;background:var(--hairline);margin-top:-26px}
@@ -111,7 +110,6 @@
   .leg.bernina{stroke:#c2871f;stroke-width:5}
   .leg.return{stroke:#fff;stroke-width:2.4;stroke-dasharray:2 9;opacity:.9}
   .stopdot circle{fill:#fff;stroke:#20586a;stroke-width:4}
-  .hldot{fill:none;stroke:#c2871f;stroke-width:3}
   .place text{
     font-family:var(--serif);font-size:28px;font-weight:bold;fill:#1c2b33;
     stroke:#fff;stroke-width:5;paint-order:stroke;stroke-linejoin:round;
@@ -127,14 +125,6 @@
 
   /* sections */
   section{padding:64px 0 30px}
-  .eyebrow{
-    display:block;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;
-    color:var(--gold-ink);margin-bottom:10px;
-  }
-  .eyebrow::before{
-    content:"";display:inline-block;width:26px;height:3px;background:var(--gold);
-    margin-right:12px;vertical-align:middle;
-  }
   .lead{font-family:var(--serif);font-size:1.22rem;color:var(--ink-soft);max-width:44em}
   .photo{border-radius:10px;overflow:hidden;margin:26px 0 8px;box-shadow:0 10px 30px rgba(34,48,58,.13)}
   .photo img{width:100%;height:clamp(240px,45vw,480px);object-fit:cover}
@@ -274,7 +264,7 @@
       <div class="stop"><div class="node"><div class="dot"></div><div class="name">Munich</div><div class="nights">night 0 &middot; optional</div></div><div class="link-arm"></div></div>
       <div class="stop"><div class="node"><div class="dot"></div><div class="name">Rettenberg</div><div class="nights">2&ndash;3 nights</div></div><div class="link-arm"></div></div>
       <div class="stop"><div class="node"><div class="dot"></div><div class="name">Chur</div><div class="nights">1 night</div></div><div class="link-arm"></div></div>
-      <div class="stop hl"><div class="node"><div class="dot"></div><div class="name">Bernina Railway</div><div class="nights">the great crossing</div></div><div class="link-arm"></div></div>
+      <div class="stop"><div class="node"><div class="dot"></div><div class="name">Bernina Railway</div><div class="nights">day crossing</div></div><div class="link-arm"></div></div>
       <div class="stop"><div class="node"><div class="dot"></div><div class="name">Varenna</div><div class="nights">4 nights</div></div><div class="link-arm"></div></div>
       <div class="stop"><div class="node"><div class="dot"></div><div class="name">Venice</div><div class="nights">3 nights</div></div><div class="link-arm"></div></div>
       <div class="stop"><div class="node"><div class="dot"></div><div class="name">Milan</div><div class="nights">1 night</div></div></div>
@@ -310,7 +300,6 @@
             <circle cx="315" cy="590" r="7"/><circle cx="154" cy="645" r="9"/>
             <circle cx="137" cy="787" r="9"/><circle cx="710" cy="793" r="9"/>
           </g>
-          <circle class="hldot" cx="199" cy="423" r="15"/>
           <!-- labels -->
           <g class="place">
             <text x="587" y="82">Munich</text>
@@ -337,8 +326,8 @@
 
 <section id="travel">
   <div class="wrap">
-    <h2>How we'll travel: one car, then the world's most scenic trains</h2>
-    <p class="lead">One car for Bavaria only &mdash; after Lindau, nobody drives again. Everything else is trains and lake ferries: reserved seats, bags beside us, no hop longer than half a day except the two rail days that are the point. This is a slow trip on purpose.</p>
+    <h2>How we'll travel: one car, then trains all the way</h2>
+    <p class="lead">One car for Bavaria only &mdash; after Lindau, nobody drives again. Everything else is trains and lake ferries: reserved seats, bags beside us, no hop longer than half a day except two longer, scenic rail days. This is a slow trip on purpose.</p>
 
     <div class="timeline">
       <div class="tl">
@@ -362,7 +351,7 @@
       <div class="tl">
         <h3>The Bernina Railway: Chur &rarr; Tirano &rarr; Varenna</h3>
         <div class="dur">Morning panoramic train + short lunch stop + ~1&frac14; h regional</div>
-        <details><summary>Details</summary><p>The headline day: reserved panoramic seats over the highest rail crossing of the Alps, lunch in Tirano, then a lakeside train to Varenna by mid-afternoon.</p></details>
+        <details><summary>Details</summary><p>Reserved panoramic seats over the Alps, lunch in Tirano, then a lakeside train to Varenna by mid-afternoon.</p></details>
       </div>
       <div class="tl stay">
         <h3>Varenna, Lake Como &mdash; 4 nights</h3>
@@ -440,13 +429,11 @@
 
 <section id="bernina">
   <div class="wrap">
-    <span class="eyebrow">The headline day</span>
     <h2>The Bernina Railway &mdash; the crossing</h2>
     <p class="lead">A UNESCO World Heritage line and the highest rail crossing of the Alps: glaciers, spiral viaducts and turquoise lakes, watched from a reserved panoramic seat.</p>
     <div class="photo"><img src="images/bernina-lagobianco.jpg" alt="The red Bernina Express running beside the milky-turquoise Lago Bianco at the summit of the pass" loading="lazy"></div>
     <div class="cards">
-      <div class="card"><img class="card-img" src="images/bernina.jpg" alt="A red Rhaetian Railway train curving across the tall stone arches of the Landwasser Viaduct" loading="lazy"><h3>Landwasser Viaduct &amp; the Albula spirals</h3><p>The curved bridge into a cliff-face tunnel, then a line that corkscrews <em>inside</em> the mountain.</p></div>
-      <div class="card"><img class="card-img" src="images/bernina-morteratsch.jpg" alt="The Morteratsch Glacier below the peaks of the Bernina massif" loading="lazy"><h3>Glaciers &amp; the summit</h3><p>The Morteratsch Glacier, then the 2,253&nbsp;m summit beside the milky-turquoise Lago Bianco.</p></div>
+      <div class="card"><img class="card-img" src="images/bernina.jpg" alt="A red Rhaetian Railway train curving across the tall stone arches of the Landwasser Viaduct" loading="lazy"><h3>Over the Alps</h3><p>The Landwasser Viaduct, the Albula spirals that corkscrew <em>inside</em> the mountain, and the 2,253&nbsp;m summit beside the milky-turquoise Lago Bianco.</p></div>
       <div class="card"><img class="card-img" src="images/bernina-brusio.jpg" alt="A red train crossing the Brusio circular viaduct, its track looping beneath" loading="lazy"><h3>Down into Italy</h3><p>The balcony view from Alp Gr&uuml;m, the Brusio viaduct where the train loops over itself, and lunch in Tirano &mdash; pizzoccheri, of course.</p></div>
       <div class="card"><img class="card-img" src="images/bernina-alpgruem.jpg" alt="The view from Alp Grüm down the green Poschiavo valley toward its lake" loading="lazy"><h3>Then a short lakeside hop</h3><p>An easy regional train (~1&frac14; h) along Lake Como's eastern shore brings us to Varenna by mid-afternoon.</p></div>
     </div>
@@ -561,7 +548,6 @@
         <li><a href="https://commons.wikimedia.org/wiki/File:Chur-04-Kathedrale_Mariae_Himmelfahrt-2006-gje.jpg" target="_blank" rel="noopener">Chur Cathedral</a> &mdash; Gerd Eichmann, CC BY-SA 4.0</li>
         <li><a href="https://commons.wikimedia.org/wiki/File:RhB_ABe_4-4_III_mit_Bernina-Express_am_Lago_Bianco.jpg" target="_blank" rel="noopener">Lago Bianco</a> &mdash; Kabelleger / David Gubler, CC BY-SA 3.0</li>
         <li><a href="https://commons.wikimedia.org/wiki/File:RhB_Ge_4-4_III_UNESCO_Weltkulturerbe_auf_Landwasserviadukt.jpg" target="_blank" rel="noopener">Landwasser Viaduct (card)</a> &mdash; Kabelleger / David Gubler, CC BY-SA 3.0</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Morteratschgletscher_2007_Piz_Pal%C3%BC_Bellavista_Piz_Bernina_Piz_Morteratsch.jpg" target="_blank" rel="noopener">Morteratsch Glacier</a> &mdash; Kurt Ritschard, CC BY-SA 2.0</li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Kreisviadukt_von_Brusio._2021-02-28_15-56-28.jpg" target="_blank" rel="noopener">Brusio spiral viaduct</a> &mdash; Shesmax, CC BY-SA 4.0</li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Puschlav_seen_from_Alp_Gr%C3%BCm_Poschiavo_2022-09-27_01.jpg" target="_blank" rel="noopener">Alp Gr&uuml;m view</a> &mdash; Leonhard Lenz, CC0</li>
         <li><a href="https://commons.wikimedia.org/wiki/File:20160623_Varenna_05.jpg" target="_blank" rel="noopener">Varenna at dusk</a> &mdash; Pomptidom, CC BY-SA 4.0</li>
