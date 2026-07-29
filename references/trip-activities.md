@@ -28,10 +28,9 @@ Bavaria's alpine dairy country: green foothills, onion-domed churches, and the A
 - Cheese country: alpine dairies (Sennereien) sell Bergkäse direct.
 
 **Day trips by car (while we still have it):**
-- **Neuschwanstein & Hohenschwangau castles (Füssen, ~1h15):** the fairy-tale castle. Book timed interior tickets **well in advance online** — September walk-ups usually fail. The exterior views and the Marienbrücke bridge viewpoint are the real highlight; pair with lunch in pretty Füssen.
+- **Neuschwanstein & Hohenschwangau castles (Füssen, ~1h15):** the fairy-tale castle. Book timed interior tickets **well in advance online** — September walk-ups usually fail. The exterior views and the Marienbrücke bridge viewpoint are the real highlight; pair with lunch in pretty Füssen. ⚠️ **Check Marienbrücke status shortly before the castle day** (hohenschwangau.de) — the bridge has a history of temporary maintenance/weather closures, and it's the main reason to go.
 - **Wieskirche (~30 min beyond Füssen):** UNESCO rococo pilgrimage church standing alone in a meadow — a 45-minute jaw-dropper, natural add-on to the castle day.
-- **Lindau old town:** the historic harbor island on Lake Constance — we drive here anyway to drop the car, so arrive early and enjoy the harbor and lanes before the train.
-- **Bregenz & the Pfänder cable car (Austria, ~40 min):** panoramic ride above Lake Constance — a good non-castle alternative.
+- **Bregenz & the Pfänder cable car (Austria, ~40 min):** panoramic ride above Lake Constance — a good non-castle alternative. (Lindau itself is car-drop-and-train only — no sightseeing stop planned.)
 
 ## Chur, Switzerland (1 night)
 

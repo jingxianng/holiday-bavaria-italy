@@ -50,6 +50,7 @@
 
 - Regional train **Iseo → Brescia** on the branch line: **~1 h**, roughly hourly, cheap and unreserved. Iseo station is a short walk from the lakefront.
 - Change at Brescia (compact station, easy transfer — the only luggage-handling moment of the day).
+- ⚠️ **Buffer the Brescia connection.** The Iseo branch is Trenord; the Frecciarossa is a separate Trenitalia ticket tied to a specific train — a late regional can strand a cheap non-flex fare. Take the regional **one departure earlier than the tightest fit** (≈45–60 min in Brescia; coffee, not stress). Also **check Trenord's "cantieri" page near the date** — this branch line periodically has engineering-work bus replacements, which change the timings.
 - **Frecciarossa Brescia → Venezia Santa Lucia**: **~1h45**, several per day (plus slightly slower Frecce/regional options). Reserved seats; book ahead on Trenitalia for the best fares.
 - Total **~3 hours**, all daytime, bags stay with you. Santa Lucia station opens directly onto the Grand Canal.
 - In Venice: no cars exist — everything is on foot and by **vaporetto** (water bus). Buy a multi-day vaporetto pass on arrival.
