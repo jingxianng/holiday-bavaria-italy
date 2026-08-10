@@ -4,47 +4,525 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Northern Spain — Trip in Planning</title>
+<title>Green Spain — Our Family Journey, Early September</title>
 <style>
   :root{
     --ink:#22303a;
     --ink-soft:#4a5a66;
     --cream:#faf8f3;
+    --card:#ffffff;
     --alpine:#33606f;
+    --alpine-deep:#24485425;
+    --lake:#2e6e63;
+    --gold:#b0812f;
+    --gold-ink:#8a6420;
     --line:#e3ddd2;
+    --hairline:#d8d1c4;
     --serif:'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
+  @media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
   body{
     font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-size:19px;line-height:1.65;color:var(--ink);
     background:var(--cream);
     -webkit-font-smoothing:antialiased;
-    min-height:100vh;display:flex;flex-direction:column;
   }
-  h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,6vw,3rem);line-height:1.15}
+  h1,h2,h3,.serif{font-family:var(--serif);font-weight:400}
+  h2{font-size:2.1rem;line-height:1.2;margin-bottom:.6rem;color:var(--ink)}
+  h3{font-size:1.35rem;margin-bottom:.4rem}
+  p{margin-bottom:1rem}
   a{color:var(--alpine)}
-  a:focus-visible{outline:3px solid var(--alpine);outline-offset:2px;border-radius:2px}
-  .wrap{max-width:640px;margin:0 auto;padding:0 20px;text-align:center}
-  main{flex:1;display:flex;align-items:center;padding:64px 0}
-  .kicker{letter-spacing:.28em;text-transform:uppercase;font-size:.8rem;color:var(--ink-soft);margin-bottom:12px}
-  .sub{font-family:var(--serif);font-style:italic;color:var(--ink-soft);margin-top:16px}
-  .back{display:inline-block;margin-top:28px;text-decoration:none;font-size:.95rem}
-  footer{border-top:1px solid var(--line);padding:24px 0 48px;text-align:center;font-size:.85rem;color:var(--ink-soft)}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+
+  /* nav */
+  nav{
+    position:sticky;top:0;z-index:50;background:rgba(250,248,243,.95);
+    backdrop-filter:blur(6px);border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;gap:4px;overflow-x:auto;padding:0 12px;-webkit-overflow-scrolling:touch}
+  nav a{
+    white-space:nowrap;text-decoration:none;color:var(--ink-soft);
+    font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;
+    padding:14px 12px;border-bottom:3px solid transparent;
+  }
+  nav a:hover{color:var(--alpine);border-bottom-color:var(--alpine)}
+  @media (max-width:840px){
+    nav::after{
+      content:"";position:absolute;right:0;top:0;bottom:1px;width:38px;
+      background:linear-gradient(90deg,rgba(250,248,243,0),rgba(250,248,243,.95));
+      pointer-events:none;
+    }
+  }
+  a:focus-visible,summary:focus-visible,.lb button:focus-visible{
+    outline:3px solid var(--alpine);outline-offset:2px;border-radius:2px;
+  }
+
+  /* hero */
+  header{position:relative;color:#fff;overflow:hidden;display:flex;align-items:center;min-height:72vh}
+  header>.wrap{width:100%}
+  header .bg{
+    position:absolute;inset:0;
+    background:url('images/hero-picos.jpg') center 62%/cover no-repeat;
+  }
+  header .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,30,40,.62) 0%,rgba(15,30,40,.42) 45%,rgba(15,30,40,.80) 100%)}
+  header .wrap{position:relative;padding-top:96px;padding-bottom:52px;text-align:center}
+  .kicker{letter-spacing:.28em;text-transform:uppercase;font-size:.8rem;opacity:.92;margin-bottom:14px}
+  header h1{font-size:clamp(2.3rem,6vw,3.9rem);line-height:1.12;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+  header .sub{
+    font-family:var(--serif);font-style:italic;
+    font-size:clamp(1.05rem,2.6vw,1.35rem);max-width:46em;margin:18px auto 0;
+    text-shadow:0 1px 10px rgba(0,0,0,.55);
+  }
+  header .who{margin-top:14px;font-size:.95rem;opacity:.9;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+
+  /* route strip */
+  .route{background:#fff;border-bottom:1px solid var(--line)}
+  .route .wrap{padding:28px 20px 34px}
+  .route h2{text-align:center;font-size:1.15rem;font-family:inherit;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:22px}
+  .stops{display:flex;flex-wrap:wrap;justify-content:center;gap:0;row-gap:18px}
+  .stop{display:flex;align-items:center}
+  .stop .node{text-align:center;min-width:96px;padding:0 6px}
+  .stop .dot{width:13px;height:13px;border-radius:50%;background:var(--alpine);margin:0 auto 8px;box-shadow:0 0 0 4px var(--alpine-deep)}
+  .stop .name{font-family:var(--serif);font-size:1.02rem;line-height:1.25}
+  .stop .nights{font-size:.8rem;color:var(--ink-soft)}
+  .stop .link-arm{width:42px;height:2px;background:var(--hairline);margin-top:-26px}
+  @media (max-width:760px){
+    .stops{flex-direction:column;align-items:flex-start;max-width:320px;margin:0 auto}
+    .stop{width:100%}
+    .stop .node{display:flex;align-items:baseline;gap:12px;text-align:left;min-width:0;padding:0}
+    .stop .dot{margin:0;position:relative;top:1px;flex:none}
+    .stop .nights{margin-left:auto}
+    .stop .link-arm{display:none}
+    .stop + .stop{margin-top:2px;padding-top:14px}
+  }
+
+  /* sections */
+  section{padding:64px 0 30px}
+  .lead{font-family:var(--serif);font-size:1.22rem;color:var(--ink-soft);max-width:44em}
+  .photo{border-radius:10px;overflow:hidden;margin:26px 0 8px;box-shadow:0 10px 30px rgba(34,48,58,.13)}
+  .photo img{width:100%;height:clamp(240px,45vw,480px);object-fit:cover}
+  .caption{font-size:.85rem;color:var(--ink-soft);margin:8px 2px 0;font-style:italic}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:16px;margin:26px 0 10px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:20px 20px 16px;box-shadow:0 3px 14px rgba(34,48,58,.05);
+  }
+  .card h3{color:var(--alpine);font-size:1.18rem}
+  .card-img{
+    width:calc(100% + 40px);margin:-20px -20px 16px;max-width:none;
+    height:165px;object-fit:cover;display:block;cursor:zoom-in;
+    border-radius:9px 9px 0 0;
+  }
+  .photo img{cursor:zoom-in}
+
+  /* lightbox */
+  .lb{position:fixed;inset:0;z-index:100;background:rgba(18,26,32,.93);display:none;align-items:center;justify-content:center;flex-direction:column;padding:20px}
+  .lb.open{display:flex}
+  .lb img{max-width:min(96vw,1100px);max-height:78vh;object-fit:contain;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .lb .cap{color:#dbe4e9;font-family:var(--serif);font-style:italic;font-size:1rem;margin-top:14px;text-align:center;max-width:44em}
+  .lb .cnt{color:#8fa4af;font-size:.8rem;letter-spacing:.1em;margin-top:6px}
+  .lb button{
+    position:absolute;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);
+    color:#fff;font-size:1.6rem;line-height:1;cursor:pointer;border-radius:50%;
+    width:52px;height:52px;display:flex;align-items:center;justify-content:center;
+  }
+  .lb button:hover{background:rgba(255,255,255,.2)}
+  .lb .prev{left:14px;top:50%;transform:translateY(-50%)}
+  .lb .next{right:14px;top:50%;transform:translateY(-50%)}
+  .lb .close{top:14px;right:14px;font-size:1.3rem}
+  @media (max-width:700px){
+    .lb .prev,.lb .next{top:auto;bottom:18px;transform:none}
+    .lb .prev{left:24vw}.lb .next{right:24vw}
+  }
+  .card p{font-size:.98rem;margin-bottom:.4rem;color:var(--ink)}
+  .card .tag{display:inline-block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:6px}
+  .card:not(:has(.card-img)){background:#f5f1e7}
+
+  .note{
+    background:#eef3f2;border-left:4px solid var(--lake);border-radius:0 8px 8px 0;
+    padding:16px 20px;margin:22px 0;font-size:.98rem;
+  }
+  .note strong{color:var(--lake)}
+
+  /* travel timeline */
+  .timeline{margin:30px 0 6px;border-left:3px solid var(--hairline);padding-left:26px}
+  .tl{position:relative;padding-bottom:26px}
+  .tl:last-child{padding-bottom:4px}
+  .tl::before{
+    content:"";position:absolute;left:-35px;top:6px;width:13px;height:13px;border-radius:50%;
+    background:var(--alpine);box-shadow:0 0 0 4px var(--alpine-deep);
+  }
+  .tl.stay::before{background:#9db3ad}
+  .tl h3{font-size:1.15rem}
+  .tl .dur{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+  .tl p{font-size:.98rem;color:var(--ink-soft);margin-bottom:0;max-width:40em}
+
+  /* FAQ */
+  details{
+    background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:6px 22px;margin-bottom:12px;
+  }
+  summary{
+    cursor:pointer;font-family:var(--serif);font-size:1.18rem;padding:12px 0;
+    list-style:none;position:relative;padding-right:34px;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";position:absolute;right:4px;top:8px;font-size:1.5rem;color:var(--alpine);transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{color:var(--ink-soft);font-size:1rem;padding-bottom:12px}
+
+  /* inline collapsed details (timeline) */
+  .tl details{background:none;border:none;border-radius:0;padding:0;margin:0}
+  .tl summary{
+    display:inline-block;font-family:inherit;font-size:.8rem;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--alpine);padding:2px 22px 2px 0;
+  }
+  .tl summary::after{top:-1px;right:2px;font-size:1.15rem}
+  .tl details p{font-size:.98rem;color:var(--ink-soft);padding:2px 0 4px;margin:0;max-width:40em}
+
+  /* collapsed booking note */
+  details.note{
+    background:#eef3f2;border:none;border-left:4px solid var(--lake);
+    border-radius:0 8px 8px 0;padding:14px 20px;margin:22px 0;
+  }
+  details.note summary{font-family:inherit;font-size:.98rem;font-weight:600;color:var(--lake);padding:2px 26px 2px 0}
+  details.note summary::after{color:var(--lake);top:-2px;right:2px}
+  details.note p{color:var(--ink);font-size:.98rem;padding:10px 0 2px;margin:0}
+
+  footer{margin-top:70px;background:#22303a;color:#c8d2d8;font-size:.85rem}
+  footer details.credits{background:transparent;border:none;border-radius:0;padding:0;margin-top:12px}
+  footer details.credits summary{font-family:inherit;font-size:.85rem;color:#9fb0ba;padding:4px 0 4px}
+  footer details.credits summary::after{content:none}
+  footer details.credits ul{list-style:none;columns:2;column-gap:34px;margin-top:8px}
+  footer details.credits li{margin-bottom:4px;break-inside:avoid}
+  @media (max-width:700px){footer details.credits ul{columns:1}}
+  footer .wrap{padding:36px 20px}
+  footer a{color:#9fc0cc}
+  footer p{margin-bottom:.6rem}
+  .divider{height:1px;background:var(--line);max-width:1020px;margin:40px auto 0}
 </style>
 </head>
 <body>
 
-<main>
+<header id="top">
+  <div class="bg" role="img" aria-label="The green Lake Ercina at the Lakes of Covadonga, with the snow-dusted peaks of the Picos de Europa behind"></div>
+  <div class="shade"></div>
   <div class="wrap">
-    <p class="kicker">In planning</p>
-    <h1>Northern Spain</h1>
-    <p class="sub">The route, dates, and highlights are still taking shape &mdash; the full plan will appear here once it's ready.</p>
-    <a class="back" href="../">&larr; Back to all trips</a>
+    <div class="kicker">Early September &middot; Madrid &middot; Asturias &middot; Cantabria &middot; Basque Country</div>
+    <h1>Green Spain, Slowly</h1>
+    <p class="sub">A weekend of art and tapas in the capital &mdash; then a fast train under the mountains to cider country, a shuttle up to two glacial lakes, four slow nights on Spain's storybook coast, and a finale of pintxos, harbor-grilled fish, and Gehry's titanium ship in Bilbao.</p>
+    <p class="who">Mum &amp; Pa fly in from Singapore &middot; X &amp; E from Philadelphia &middot; 12 nights, early September</p>
   </div>
-</main>
+</header>
 
-<footer>Made with love for the family.</footer>
+<nav aria-label="Sections">
+  <div class="wrap">
+    <a href="../" aria-label="All trips">&larr; Trips</a>
+    <a href="#travel">How we travel</a>
+    <a href="#madrid">Madrid</a>
+    <a href="#oviedo">Oviedo</a>
+    <a href="#covadonga">Covadonga</a>
+    <a href="#cantabria">Cantabria</a>
+    <a href="#bilbao">Bilbao</a>
+    <a href="#eating">How we eat</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
 
+<div class="route">
+  <div class="wrap">
+    <h2>The Route</h2>
+    <div class="stops">
+      <div class="stop"><div class="node"><div class="dot"></div><div class="name">Madrid</div><div class="nights">3 nights</div></div><div class="link-arm"></div></div>
+      <div class="stop"><div class="node"><div class="dot"></div><div class="name">Oviedo</div><div class="nights">2 nights</div></div><div class="link-arm"></div></div>
+      <div class="stop"><div class="node"><div class="dot"></div><div class="name">Covadonga</div><div class="nights">en route</div></div><div class="link-arm"></div></div>
+      <div class="stop"><div class="node"><div class="dot"></div><div class="name">Comillas / Santillana</div><div class="nights">4 nights</div></div><div class="link-arm"></div></div>
+      <div class="stop"><div class="node"><div class="dot"></div><div class="name">Bilbao</div><div class="nights">3 nights</div></div></div>
+    </div>
+  </div>
+</div>
+
+<section id="travel">
+  <div class="wrap">
+    <h2>How we'll travel: slowly, on purpose</h2>
+    <p class="lead">No car at all until the coast: Madrid is done on foot, and a fast train slips under the mountains to Oviedo in about three hours. Then one car, one well-planned transfer day with the trip's headline mountain visit built into it, a four-night base, one short hop to Bilbao &mdash; and the car's last job is delivering us to the airport door.</p>
+
+    <div class="timeline">
+      <div class="tl">
+        <h3>Fly into Madrid</h3>
+        <div class="dur">Arrive Friday &middot; taxi to the hotel</div>
+        <details><summary>Details</summary><p>Everyone lands at Madrid&ndash;Barajas; a flat-fare taxi takes us straight to the old town. Nobody drives, nobody navigates.</p></details>
+      </div>
+      <div class="tl stay">
+        <h3>Madrid &mdash; 3 nights</h3>
+        <p>A full weekend: one great museum done briskly, the old town, the park, long tapas evenings &mdash; and the Sunday flea market.</p>
+      </div>
+      <div class="tl">
+        <h3>Madrid &rarr; Oviedo</h3>
+        <div class="dur">~3&frac14; hours by fast train</div>
+        <details><summary>Details</summary><p>The Alvia leaves from Chamart&iacute;n station and runs under the Cantabrian mountains through one of Europe's longest rail tunnels &mdash; a route that took five hours until 2023. Reserved seats, bags beside us.</p></details>
+      </div>
+      <div class="tl stay">
+        <h3>Oviedo &mdash; 2 nights</h3>
+        <p>Asturias' polished little capital: cathedral lanes, the market, and the famous cider street. Still no car, and no museums either.</p>
+      </div>
+      <div class="tl">
+        <h3>The Covadonga day: Oviedo &rarr; the lakes &rarr; Cantabria</h3>
+        <div class="dur">Early start &middot; car + shuttle &middot; the one big day</div>
+        <details><summary>Details</summary><p>The car is collected the evening before, so the day starts at 8:00 sharp. Luggage is loaded once (the trunk stays shut until the hotel &mdash; valuables ride with us in daypacks); we park at Cangas de On&iacute;s and take the pre-booked shuttle up to the lakes. Basilica after, lunch in Cangas, then an easy motorway run east &mdash; with an optional seaside stop if energy allows. If the morning is cloudy, we simply skip the lakes: the cable car later in the week is the mountain backup.</p></details>
+      </div>
+      <div class="tl stay">
+        <h3>Western Cantabria &mdash; 4 nights</h3>
+        <p>The slow middle: a coast day, a weather-flex mountain day, and a spare day &mdash; slack built into the system.</p>
+      </div>
+      <div class="tl">
+        <h3>Cantabria &rarr; Bilbao</h3>
+        <div class="dur">~1&frac12; hours</div>
+        <details><summary>Details</summary><p>East along the coast motorway, maybe pausing for anchovies in Santo&ntilde;a. The car keeps its parking spot at the Bilbao hotel for one last coastal outing.</p></details>
+      </div>
+      <div class="tl stay">
+        <h3>Bilbao &mdash; 3 nights</h3>
+        <p>The Urdaibai coast loop on Monday, the Guggenheim on Tuesday, and three very different dinners &mdash; all from one hotel, no packing in between.</p>
+      </div>
+      <div class="tl">
+        <h3>Fly home from Bilbao</h3>
+        <div class="dur">Car dropped at the airport &middot; 20 min from town</div>
+        <details><summary>Details</summary><p>X &amp; E connect through Madrid to Philadelphia. Mum &amp; Pa hop to Madrid, sleep at an airport hotel &mdash; no rushing &mdash; and fly to Singapore fresh the next day.</p></details>
+      </div>
+    </div>
+
+    <details class="note"><summary>Booking notes (the boring bits, handled)</summary><p>Train tickets go on sale a few months out and get booked the day they appear; the car is a routine one-way within Spain (Oviedo pickup, Bilbao airport drop &mdash; fee confirmed at booking); the Covadonga lakes shuttle gets booked online when the season's plan publishes in spring; timed tickets for the Prado and Guggenheim (which skips Mondays &mdash; so the coast gets Monday and the museum Tuesday), the Gaztelugatxe permit, and tables at Bot&iacute;n and a traditional Bilbao fish house get reserved ahead. One decision is deliberately still open: we may add a night to Madrid or Bilbao (and trim Cantabria to three) &mdash; so every hotel is held refundable until that's locked. Nothing here requires anyone else to plan anything.</p></details>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="madrid">
+  <div class="wrap">
+    <h2>Madrid &mdash; the grand opening weekend</h2>
+    <p class="lead">None of us has ever been &mdash; and the plan is deliberately light: one museum done well, then streets, park, market, and long tapas evenings. Madrid rewards wandering more than queueing.</p>
+    <div class="photo"><img src="images/madrid.jpg" alt="The painted facades and arcades of Plaza Mayor in Madrid under a deep blue sky" loading="lazy"></div>
+    <div class="cards">
+      <div class="card"><img class="card-img" src="images/madrid-prado.jpg" alt="The statue of Velázquez seated before the columned facade of the Prado museum" loading="lazy"><h3>The Prado &mdash; ninety great minutes</h3><p>One of the world's three great painting museums, visited the smart way: a timed ticket at opening and a highlights run &mdash; Vel&aacute;zquez's <em>Las Meninas</em>, Goya's majas and black paintings, Bosch's <em>Garden of Earthly Delights</em> &mdash; then coffee in the Retiro while the crowds are still arriving. The only museum in Madrid we do at all.</p></div>
+      <div class="card"><img class="card-img" src="images/madrid-retiro.jpg" alt="The glass Crystal Palace in Retiro Park, ringed by trees and its small lake" loading="lazy"><h3>Retiro &amp; the stroll-past palace</h3><p>The city's garden &mdash; the Crystal Palace, the boating lake, the evening paseo &mdash; and the Royal Palace admired from its plaza and the cathedral viewpoint, no interior queue required.</p></div>
+      <div class="card"><h3>Bot&iacute;n, tapas &amp; the Sunday ritual</h3><p>Dinner at Sobrino de Bot&iacute;n &mdash; the world's oldest restaurant (1725), wood-fired suckling pig, booked ahead &mdash; plus tapas crawls on Cava Baja, churros at San Gin&eacute;s, and Sunday morning at the El Rastro flea market with vermouth after.</p></div>
+      <div class="card"><img class="card-img" src="images/segovia.jpg" alt="The tall granite arches of Segovia's Roman aqueduct against a blue evening sky" loading="lazy"><span class="tag">Optional &middot; decided on the day</span><h3>Segovia, 30 minutes away</h3><p>A Roman aqueduct standing intact across the town square, a fairy-tale castle, and wood-roasted suckling pig for lunch. The fast train makes it a game-time call &mdash; energy and weather decide. (If we give Madrid a fourth night, this becomes a committed day.)</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="oviedo">
+  <div class="wrap">
+    <h2>Oviedo &mdash; cider country's elegant capital</h2>
+    <p class="lead">Three hours after leaving Madrid we're in a different Spain: green, granite, and Atlantic. Oviedo is compact, pedestrianized, and unhurried &mdash; no museums here, just the town, the market, and the best cider culture in the world.</p>
+    <div class="photo"><img src="images/oviedo.jpg" alt="Oviedo cathedral's gothic tower rising over the old town square in evening light" loading="lazy"></div>
+    <div class="cards">
+      <div class="card"><img class="card-img" src="images/oviedo-gascona.jpg" alt="A waiter pouring Asturian cider from a bottle held high above his head into a glass at his hip" loading="lazy"><h3>Calle Gascona, the cider boulevard</h3><p>Waiters pour cider from above their heads to wake it up &mdash; and the glasses keep coming alongside <em>fabada asturiana</em>, the mighty bean-and-sausage stew, and <em>cachopo</em>. The anti-fancy dinner of the trip, and maybe the best.</p></div>
+      <div class="card"><h3>The old town &amp; the market</h3><p>Cathedral lanes, arcaded squares, and the El Font&aacute;n food market &mdash; Cabrales cheese, chorizo, and picnic supplies for the road days ahead.</p></div>
+      <div class="card"><img class="card-img" src="images/oviedo-naranco.jpg" alt="Santa María del Naranco, a 9th-century stone palace-church standing alone on its hillside meadow" loading="lazy"><h3>The mountain kings' chapel</h3><p>On the hill above town stand Santa Mar&iacute;a del Naranco and San Miguel de Lillo &mdash; UNESCO-listed royal buildings from the 9th century, built by the tiny mountain kingdom where the Reconquista began. Ten minutes by taxi, a thousand years back in time.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="covadonga">
+  <div class="wrap">
+    <h2>The Covadonga day &mdash; the mountains, en route</h2>
+    <p class="lead">Moving day, done cleverly: the trip's headline mountain visit is folded into the drive east. Luggage is loaded once in Oviedo and the trunk stays shut until the hotel; we start early, and the mountains come to us by shuttle.</p>
+    <div class="photo"><img src="images/covadonga.jpg" alt="The pink basilica of Covadonga against the steep green mountainside of the Picos de Europa" loading="lazy"></div>
+    <div class="cards">
+      <div class="card"><span class="tag">Morning</span><h3>The lakes, by shuttle</h3><p>From Cangas de On&iacute;s, a pre-booked shuttle climbs to the glacial lakes of Enol and Ercina at 1,100&nbsp;m &mdash; green water, grazing cows, the Picos all around (the summer road is closed to cars, which is exactly why it stays lovely). Strolls between viewpoints are as short as we want them.</p></div>
+      <div class="card"><span class="tag">Midday</span><h3>The basilica &amp; lunch in Cangas</h3><p>Down the same road: the pink basilica in its mountain amphitheater and the Holy Cave shrine in the cliff &mdash; where, tradition says, the Reconquista began. Then lunch in Cangas de On&iacute;s by its famous humpback bridge.</p></div>
+      <div class="card"><img class="card-img" src="images/gulpiyuri.jpg" alt="Gulpiyuri, a small sandy beach set in a green meadow with no sea in sight" loading="lazy"><span class="tag">Afternoon &middot; optional</span><h3>A seaside stop driving east</h3><p>If energy allows on the easy motorway run to Cantabria: Playa de Gulpiyuri &mdash; the beach with no sea, a sinkhole meadow that fills with tidal water through a cave &mdash; a short, flat stroll from the road.</p></div>
+      <div class="card"><img class="card-img" src="images/llanes.jpg" alt="Llanes fishing harbor with boats at the quay, the town behind and green mountains under low cloud" loading="lazy"><span class="tag">Afternoon &middot; optional</span><h3>Or: an hour in Llanes</h3><p>A real fishing town with an old quarter wrapped around its port &mdash; the prettiest leg-stretch on this stretch of coast, and a first taste of the sea we'll live beside for the next four nights.</p></div>
+    </div>
+    <div class="note"><strong>The weather rule:</strong> if the morning is cloudy, we skip the lakes entirely &mdash; nobody rides a shuttle into fog. A quick look at the basilica, then straight on to the coast. The cable car later in the week is the mountain backup; between the two, the odds of at least one clear mountain day are excellent.</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="cantabria">
+  <div class="wrap">
+    <h2>Western Cantabria &mdash; four nights on the storybook coast</h2>
+    <p class="lead">The slow middle of the trip. The base is one of three lovely towns ten minutes apart &mdash; sea views in Comillas or San Vicente de la Barquera, medieval perfection in Santillana del Mar &mdash; and the four nights hold three real days: coast, mountains, and a spare. The slack is the luxury.</p>
+    <div class="photo"><img src="images/santillana.jpg" alt="The stone arcades and flag-hung balcony of the town hall on Santillana del Mar's Plaza Mayor" loading="lazy"></div>
+    <div class="cards">
+      <div class="card"><img class="card-img" src="images/comillas-capricho.jpg" alt="El Capricho, Gaudí's sunflower-tiled villa in Comillas, seen across a garden of pink and purple hydrangeas" loading="lazy"><span class="tag">Coast day</span><h3>Comillas, Santillana &amp; young Gaud&iacute;</h3><p>El Capricho &mdash; the sunflower-tiled villa a 31-year-old Gaud&iacute; built in Comillas &mdash; a proper beach, and Santillana del Mar's stone lanes taken early or in the evening, when the day-trippers have gone and we're sleeping next door. The Altamira cave-art museum is on the menu as an option, not an obligation.</p></div>
+      <div class="card"><img class="card-img" src="images/fuentede.jpg" alt="The view from the top of the Fuente Dé cable car: limestone peaks rising from a sea of cloud filling the valley" loading="lazy"><span class="tag">If the morning is clear</span><h3>Fuente D&eacute; &mdash; four minutes to the high mountains</h3><p>A cable car rises 750 vertical meters up a rock face to 1,823&nbsp;m &mdash; effortless high-alpine drama, easy strolling on top, and the medieval town of Potes (hearty highland stew, a sip of orujo) on the way home. We check the webcam at breakfast: clear means mountains.</p></div>
+      <div class="card"><img class="card-img" src="images/sanvicente.jpg" alt="The long stone bridge and fishing boats of San Vicente de la Barquera, its castle on the hill behind" loading="lazy"><span class="tag">If it's cloudy</span><h3>Harbor towns &amp; Santander</h3><p>San Vicente de la Barquera's bridge and boats, or a city day in Santander &mdash; the Magdalena peninsula, El Sardinero's beach promenade, the food market. The rainy-day plan here is nobody's consolation prize.</p></div>
+      <div class="card"><span class="tag">The spare day</span><h3>Beach, anchovies, or nothing at all</h3><p>Day four belongs to whatever wants it: beach time below the town, the anchovy shops of Santo&ntilde;a, a second lazy morning in Santillana &mdash; or the mountain or city day that got weathered out earlier. Built-in slack, by design.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="bilbao">
+  <div class="wrap">
+    <h2>Bilbao &amp; the Basque coast &mdash; the grand finale</h2>
+    <p class="lead">A former industrial city reborn around one astonishing building, with the best eating of the whole trip &mdash; from harbor-step anchovies to a coal-fire fish house. Three nights from one hotel: the coast loop Monday, the Guggenheim Tuesday &mdash; and then the car drops us at the plane.</p>
+    <div class="photo"><img src="images/bilbao.jpg" alt="The curved titanium volumes of the Guggenheim museum on the Bilbao riverside, with the red La Salve bridge beside it" loading="lazy"></div>
+    <div class="cards">
+      <div class="card"><h3>The Guggenheim &mdash; Tuesday</h3><p>Gehry's titanium ship on the river &mdash; the one full museum of the north, and worth the trip for the building alone, with Serra's walk-in steel labyrinths inside and the flower Puppy standing guard. Timed tickets, no queue &mdash; and it takes Tuesday because the museum traditionally rests on Mondays. <a href="https://www.guggenheim-bilbao.eus/en" target="_blank" rel="noopener">Official site</a>.</p></div>
+      <div class="card"><img class="card-img" src="images/gaztelugatxe.jpg" alt="San Juan de Gaztelugatxe: a hermitage-topped islet joined to the coast by a winding stone causeway" loading="lazy"><span class="tag">Monday &middot; the coast loop</span><h3>Gaztelugatxe, Bermeo &amp; Gernika</h3><p>One coherent loop on the near coast, never more than 45 minutes from town: the hermitage islet of Gaztelugatxe and its winding stone causeway (the clifftop view needs no steps at all), a simple portside lunch in the working fishing town of Bermeo, and Gernika &mdash; whose famous market day is Monday, the living version of the market Picasso painted. We met <em>Guernica</em>'s story in Madrid; here is where it happened.</p></div>
+      <div class="card"><img class="card-img" src="images/bilbao-casco.jpg" alt="The arcaded Plaza Nueva square in Bilbao's old town, ringed by pintxos bars" loading="lazy"><h3>The Casco Viejo, grazing</h3><p>The Siete Calles and the arcaded Plaza Nueva, ringed with pintxos bars &mdash; Basque counter-top eating without the San Sebasti&aacute;n crush &mdash; and the Ribera market, Europe's largest covered market, for lunch under one roof.</p></div>
+      <div class="card"><h3>Fish, two ways</h3><p>The casual night: grilled sardines on the harbor at Santurtzi, or anchovies and <em>rabas</em> eaten on the stone steps of Algorta's old port &mdash; both a short metro ride, both gloriously unceremonious. The splurge night: a booked table at a traditional Bilbao <em>asador</em> &mdash; whole wild turbot over coals, the same fish from the same auctions as the famous Getaria grills, without leaving the city.</p></div>
+      <div class="card"><h3>The balcony view</h3><p>The little Artxanda funicular climbs above the city in three minutes for the golden-hour panorama &mdash; flat strolling and a caf&eacute; at the top.</p></div>
+      <div class="card"><img class="card-img" src="images/getaria.jpg" alt="Getaria's harbor and beach curving beneath the green hump of San Antón headland" loading="lazy"><span class="tag">If we add a night</span><h3>The encore: Getaria &amp; Zumaia</h3><p>Should Bilbao win the flex night, the bonus day drives an hour east to the harbor grill row of Getaria &mdash; whole fish over coals, txakoli grown on the hill above the village &mdash; with Zumaia's flysch cliffs, rock strata tilted like the pages of a book, fifteen minutes away. The encore, not the show.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="eating">
+  <div class="wrap">
+    <h2>How we'll eat</h2>
+    <p class="lead">The trip is built around one idea at the table: classic dishes, great ingredients, zero pretense. Two food cultures share one sea on this route &mdash; Cantabria cooks it simply, the Basques cook it proudly &mdash; and we get both, in that order. Not one tasting menu appears in twelve nights.</p>
+    <div class="cards">
+      <div class="card"><h3>The route, in dishes</h3><p>Tapas and a 300-year-old roast house in Madrid &middot; cider poured from arm's length with <em>fabada</em> in Oviedo &middot; a mountain lunch in Cangas de On&iacute;s &middot; harbor-front dinners, the world's best anchovies, and village-bakery <em>sobaos</em> in Cantabria &middot; highland stew in Potes if the cable car flies &middot; and in Bilbao: pintxos, harbor sardines, and whole turbot over coals to finish.</p></div>
+      <div class="card"><h3>Casual is the default</h3><p>The heart of the trip's seafood is Cantabria, where the base is a fishing coast and dinner is fresh hake or bream a la plancha on a port terrace &mdash; walk in, point, share. Bilbao keeps the register with sardines grilled on Santurtzi's harbor and anchovies on the stone steps of Algorta's old port. The plastic-stools spirit, Spanish-style.</p></div>
+      <div class="card"><h3>Only two tables are booked</h3><p>Bot&iacute;n in Madrid (the world's oldest restaurant &mdash; wood-fired suckling pig) and a traditional Bilbao <em>asador</em> for the one splurge: whole wild turbot over coals. Everything else walks in the door &mdash; because where we're going, that's how the best food works. (A Getaria table joins the list only if the extra Bilbao night happens.)</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Good questions, honest answers</h2>
+    <details>
+      <summary>How much walking is involved?</summary>
+      <p>Moderate, and always at our own pace. The towns are small, the museums are limited to two (one of them a brisk 90 minutes by design), and the mountain moments are engineered for ease &mdash; a shuttle to the Covadonga lakes, a cable car at Fuente D&eacute;. Every viewpoint on this trip can be reached without a hike, and the famous Gaztelugatxe steps are strictly optional.</p>
+    </details>
+    <details>
+      <summary>Is the driving hard?</summary>
+      <p>There's exactly one big driving day &mdash; and it's carefully built: an early start, the luggage loaded once, a shuttle doing the mountain road, lunch in the middle, and a motorway run to finish. Everything else is an hour or ninety minutes on good roads, and the car's final job is delivering us to the airport door. No car at all for the first five days.</p>
+    </details>
+    <details>
+      <summary>What about language and money?</summary>
+      <p>English works fine in hotels, museums, and cities; in village restaurants a pointed finger and a smile order beautifully (and X can handle the menu Spanish). Cards are accepted everywhere &mdash; no one needs to carry meaningful cash.</p>
+    </details>
+    <details>
+      <summary>What's the weather like in early September?</summary>
+      <p>Madrid: dry, sunny, warm. The north coast: this is "Green Spain" &mdash; green because it rains &mdash; but early September is its driest, warmest window, with the sea at its year-round warmest and the summer crowds gone home on September&nbsp;1. We pack a light rain layer, and both mountain moments flex around the sky: cloudy morning at Covadonga, we skip the lakes; cloudy morning in Cantabria, the cable car waits and Santander steps in. Weather costs us nothing but a reshuffle.</p>
+    </details>
+    <details>
+      <summary>Aren't the flights home complicated?</summary>
+      <p>Not in practice. X &amp; E fly Bilbao &rarr; Madrid &rarr; Philadelphia with a deliberately generous connection. Mum &amp; Pa take the one-hour hop to Madrid, sleep at a hotel at the airport &mdash; a calm final evening, no dawn sprints &mdash; and board the Singapore flight fresh the next day.</p>
+    </details>
+    <details>
+      <summary>Is the plan final?</summary>
+      <p>One decision is deliberately still open: we may add a fourth night in Madrid (making Segovia a committed day) or &mdash; the current favorite &mdash; a fourth in Bilbao, which buys the Getaria &amp; Zumaia encore day. Either is funded by trimming Cantabria to three nights, which costs the spare day. Every hotel is held refundable until that's decided &mdash; so the shape can flex without anything being lost.</p>
+    </details>
+    <details>
+      <summary>What still needs to be confirmed?</summary>
+      <p>Exact train times once tickets go on sale, the Covadonga shuttle timetable when the season's plan publishes in spring, the rental car's one-way fee, the Guggenheim's Monday hours for our dates, and the usual timed tickets (Prado, Guggenheim, the booked tables, the Gaztelugatxe permit). None of it changes the shape of the trip &mdash; and none of it is anyone's job but X's.</p>
+    </details>
+    <p style="margin-top:26px">Useful official links: <a href="https://www.museodelprado.es/en" target="_blank" rel="noopener">The Prado</a> &middot; <a href="https://www.renfe.com/es/en" target="_blank" rel="noopener">Renfe (Spanish rail)</a> &middot; <a href="https://www.guggenheim-bilbao.eus/en" target="_blank" rel="noopener">Guggenheim Bilbao</a> &middot; <a href="https://turismo.euskadi.eus/en/" target="_blank" rel="noopener">Basque Country tourism (Gaztelugatxe permits)</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><a href="#top">Back to top &uarr;</a></p>
+    <details class="credits">
+      <summary>Photo credits &mdash; all photographs via Wikimedia Commons under free licenses</summary>
+      <ul>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Lagos_de_Covadonga_lago_de_la_Ercina_1.jpg" target="_blank" rel="noopener">Hero: Lake Ercina, Covadonga</a> &mdash; Txo, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Plaza_Mayor,_Madrid,_Espa%C3%B1a,_2023-01-03,_DD_78.jpg" target="_blank" rel="noopener">Plaza Mayor</a> &mdash; Diego Delso, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Madrid_2015_10_25_3069_(26455571561).jpg" target="_blank" rel="noopener">The Prado</a> &mdash; Harvey Barrison, CC BY-SA 2.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Palacio_de_Cristal,_Parque_del_Retiro,_Madrid,_Espa%C3%B1a,_2017-05-18,_DD_21.jpg" target="_blank" rel="noopener">Crystal Palace, Retiro</a> &mdash; Diego Delso, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Acueducto_de_Segovia_01.jpg" target="_blank" rel="noopener">Segovia aqueduct</a> &mdash; David Corral Gadea, CC BY-SA 3.0 es</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Camino_de_San_Salvador,_Oviedo,_Cattedrale_del_Santo_Salvatore_01.jpg" target="_blank" rel="noopener">Oviedo cathedral</a> &mdash; Mongolo1984, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Escanciando_sidra_Oviedo_2015.JPG" target="_blank" rel="noopener">Pouring cider</a> &mdash; Hispalois, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Santa_Mar%C3%ADa_del_Naranco_(25834606571).jpg" target="_blank" rel="noopener">Santa Mar&iacute;a del Naranco</a> &mdash; &Aacute;ngel M. Felic&iacute;simo, CC BY 2.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_de_Santa_Mar%C3%ADa_la_Real_de_Covadonga_-_Covadonga,_Cangas_de_On%C3%ADs,_Spain_-_July_23,_2024_01.jpg" target="_blank" rel="noopener">Covadonga basilica</a> &mdash; Giorgio Galeotti, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:20230903_101647_Playa_de_Gulpiyuri.jpg" target="_blank" rel="noopener">Gulpiyuri</a> &mdash; 80kmh, CC BY 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Llanes_-_Puerto_03.jpg" target="_blank" rel="noopener">Llanes harbor</a> &mdash; Ecelan, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Santillana_del_Mar_-_015_(40448804854).jpg" target="_blank" rel="noopener">Santillana del Mar</a> &mdash; Luis Rogelio HM, CC BY-SA 2.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Capricho_Gaud%C3%AD_Comillas_exterior.jpg" target="_blank" rel="noopener">El Capricho</a> &mdash; Respinya, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Picos_de_Europa_-_Fuente_d%C3%A9_(mirador_del_cable)_-_@vilanchelo.jpg" target="_blank" rel="noopener">Fuente D&eacute; viewpoint</a> &mdash; Vilanchelo, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:J23_111_Puente_de_la_Barquera.jpg" target="_blank" rel="noopener">San Vicente de la Barquera</a> &mdash; Falk2, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Museo_Guggenheim_--_2021_--_Bilbao,_Euskadi,_Espa%C3%B1a.jpg" target="_blank" rel="noopener">Guggenheim Bilbao</a> &mdash; Jos&eacute; Ligero Loarte, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Plaza_Nueva_(1828-1849)._Bilbao.jpg" target="_blank" rel="noopener">Plaza Nueva</a> &mdash; Jos&eacute; Luis Filpo Cabana, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Puerto_de_Getaria.jpg" target="_blank" rel="noopener">Getaria</a> &mdash; Arseniog, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Gaztelugache,_Bermeo,_Pa%C3%ADs_Vasco,_Espa%C3%B1a,_2019-08-13,_DD_14.jpg" target="_blank" rel="noopener">Gaztelugatxe</a> &mdash; Diego Delso, CC BY-SA 4.0</li>
+      </ul>
+    </details>
+  </div>
+</footer>
+
+<div class="lb" id="lb" aria-modal="true" role="dialog">
+  <button class="close" aria-label="Close">&times;</button>
+  <button class="prev" aria-label="Previous image">&#8249;</button>
+  <button class="next" aria-label="Next image">&#8250;</button>
+  <img alt="">
+  <div class="cap"></div>
+  <div class="cnt"></div>
+</div>
+
+<script>
+(function(){
+  var lb=document.getElementById('lb'),
+      lbImg=lb.querySelector('img'),
+      lbCap=lb.querySelector('.cap'),
+      lbCnt=lb.querySelector('.cnt'),
+      group=[],idx=0;
+
+  function items(section){
+    return Array.prototype.slice.call(section.querySelectorAll('.photo img, .card-img'));
+  }
+  function show(i){
+    idx=(i+group.length)%group.length;
+    var el=group[idx];
+    lbImg.src=el.getAttribute('src');
+    lbImg.alt=el.getAttribute('alt')||'';
+    lbCap.textContent=el.getAttribute('data-cap')||el.getAttribute('alt')||'';
+    lbCnt.textContent=(idx+1)+' / '+group.length;
+  }
+  function open(section,el){
+    group=items(section);
+    show(group.indexOf(el));
+    lb.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function close(){
+    lb.classList.remove('open');
+    document.body.style.overflow='';
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target;
+    if(t.matches && (t.matches('section .photo img')||t.matches('section .card-img'))){
+      open(t.closest('section'),t);
+    }
+  });
+  lb.querySelector('.close').addEventListener('click',close);
+  lb.querySelector('.prev').addEventListener('click',function(){show(idx-1)});
+  lb.querySelector('.next').addEventListener('click',function(){show(idx+1)});
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')close();
+    if(e.key==='ArrowLeft')show(idx-1);
+    if(e.key==='ArrowRight')show(idx+1);
+  });
+  var tx=null;
+  lb.addEventListener('touchstart',function(e){tx=e.changedTouches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){
+    if(tx===null)return;
+    var dx=e.changedTouches[0].clientX-tx;tx=null;
+    if(dx>45)show(idx-1); else if(dx<-45)show(idx+1);
+  },{passive:true});
+})();
+</script>
 </body>
 </html>

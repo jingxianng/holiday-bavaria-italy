@@ -1,11 +1,11 @@
-# Family Trip Logistics — Madrid → Oviedo → Picos & the Green Coast → Bilbao
+# Family Trip Logistics — Madrid → Oviedo → Covadonga → Western Cantabria → Bilbao
 
-**Season:** Early September (year TBD) — arrive Madrid the Friday before US Labor Day. Spanish school holidays end Sept 1, so crowds drain out just as we arrive; the sea is at its warmest; this is the driest window "Green Spain" offers (it's green because it rains — pack a layer and a light rain jacket regardless).
+**Season:** Early September — arrive Madrid the Friday before US Labor Day. Spanish school holidays end Sept 1, so crowds drain out just as we arrive; the sea is at its warmest; this is the driest window "Green Spain" offers (it's green because it rains — pack a layer and a light rain jacket regardless).
 **Travelers:** Parents (arriving from Singapore) + X and partner (arriving from Philadelphia)
-**Total:** 12 nights (Madrid 3 → Oviedo 2 → eastern Asturias 2 → Cantabria 3 → Bilbao 2)
-**Core principle:** No car until the road-trip section. Madrid and Oviedo are done on foot and by fast train; one rental car carries us Oviedo → Bilbao along the coast in short hops — every drive is ~1–1.5 h, with the sightseeing built into the driving days as stop-offs. Deliberately skipped: San Sebastián (overtouristed old-town crawl doesn't fit the group; its food philosophy is covered better by sidrerías, fishing ports, and a Getaria grill lunch).
+**Total:** 12 nights, 4 bases (Madrid 3 → Oviedo 2 → western Cantabria 4 → Bilbao 3)
+**Core principle:** No car until Oviedo. Madrid and Oviedo are done on foot and by fast train; one rental car then carries us east with a single big transfer day (Covadonga en route) into a 4-night Cantabria base, a 1.5 h hop to Bilbao, and an airport drop on departure morning. Only two full museums all trip: the Prado (90-minute highlights visit) and the Guggenheim. Deliberately skipped: San Sebastián, Llanes as a base, Tito Bustillo, Reina Sofía, Royal Palace interiors. Getaria is not load-bearing either — it's the bonus day if the flex night lands in Bilbao; the splurge fish dinner happens at a traditional Bilbao asador instead.
 
-**Flex variants:** 11 nights = drop the third Cantabria night (loses the weather-flex mountain day). 13 nights = add a night in Madrid or Bilbao. San Sebastián remains a clean 2-night bolt-on before Bilbao if anyone lobbies for it later — nothing else would need to change.
+**Flex option (decide before booking hardens):** add a night to Madrid (making Segovia a committed day trip) *or* to Bilbao — currently the **leading candidate**: a fourth Bilbao night adds a second coast day, i.e. a Getaria + Zumaia outing on top of the Urdaibai loop — funded by dropping Cantabria to 3 nights (which deletes the spare day, the weather insurance). **Still a flex — hold all bookings flexible/refundable until this is decided.**
 
 ---
 
@@ -15,9 +15,8 @@
 |---|---|---|---|
 | Madrid (Fri–Mon) | 3 | Flights into MAD | Alvia fast train from Chamartín |
 | Oviedo | 2 | Train (~3h15) | Rental car pickup |
-| Eastern Asturias — Llanes (alt: Cangas de Onís) | 2 | Car, ~1 h | Car |
-| Western Cantabria — Comillas or Santillana del Mar area | 3 | Car, ~45 min–1 h | Car |
-| Bilbao | 2 | Car, ~1.5 h | Flights from BIO |
+| Western Cantabria — Comillas / San Vicente / Santillana | 4 | Transfer day via Covadonga (see below) | Car |
+| Bilbao | 3 | Car, ~1.5 h | Flights from BIO |
 
 ---
 
@@ -29,35 +28,44 @@
 
 ## Leg 1 — Madrid (3 nights, no car)
 
-- MAD airport → hotel: taxi is simplest with 4 people + luggage (there is a **fixed flat fare to the city center — verify current rate, ~€33**); Cercanías train and metro exist as alternatives.
-- Base near the Sol–Huertas–Retiro triangle: walkable to the art museums, the old town, and an easy ride to Chamartín on departure day.
-- Friday arrival → Sat/Sun in the city (Sunday = El Rastro flea market) → depart Monday morning.
+- MAD airport → hotel: taxi is simplest with 4 people + luggage (there is a **fixed flat fare to the city center — verify current rate, ~€33**).
+- Base near the Sol–Huertas–Retiro triangle: walkable to the Prado, the old town, and an easy ride to Chamartín on departure day.
+- Deliberately light program: **Prado only** as a museum (timed entry at opening, 90-minute highlights visit), the rest is streets, park, market, and food. Segovia day trip is **optional/game-time** — decided there, by energy and weather (AVE tickets are cheap; book late or not at all). **Botín is the one restaurant booked ahead.**
 
 ## Leg 2 — Madrid → Oviedo (fast train, ~3h15)
 
-- **Alvia from Madrid–Chamartín** (⚠️ note: Asturias trains leave from **Chamartín, not Atocha**). Since the Pajares base tunnel opened (2023), the fast services do Madrid → Oviedo in **~3h15** (slower stopping services ~3h50 — pick a fast one).
-- Reserved seats; buy on Renfe when sales open for the dates (Renfe releases tickets in waves, typically a few months out — set a reminder rather than assuming a fixed window).
-- Oviedo station is a ~10-minute walk from the old town. No car in Oviedo — the city is compact and pedestrianized.
+- **Alvia from Madrid–Chamartín** (⚠️ Asturias trains leave from **Chamartín, not Atocha**). Fast services do Madrid → Oviedo in **~3h15** since the Pajares base tunnel opened (2023); slower stopping services ~3h50 — pick a fast one.
+- Reserved seats; buy on Renfe when sales open for the dates (released in waves, typically a few months out — set a reminder).
+- Oviedo station is a ~10-minute walk from the old town. No car in Oviedo — the city is compact and pedestrianized. No museums here either: old town, cider, market, and the Naranco churches.
 
-## Leg 3 — Oviedo → Llanes (car pickup, ~1 h drive)
+## Leg 3 — THE transfer day: Oviedo → Covadonga → Cantabria base
 
-- **Pick up the rental car in Oviedo** on the morning of departure (city-center or station branch — compare with airport pickup on price, but the airport is 40 min the *wrong* way; city pickup is the sane default).
-- **One-way rental, drop-off Bilbao.** Domestic Spanish one-ways on this corridor are routine; expect a **drop fee on the order of €50–150** (verify per company). ⚠️ **Book early if an automatic transmission is needed** — manuals dominate Spanish fleets and automatics sell out.
-- Car size: 4 adults + luggage for ~2 weeks → book a full-size/estate or compact SUV, not a compact.
-- Drive Oviedo → **Llanes**: ~1 h motorway (A-64/A-8), or longer with a coastal stop (e.g. Ribadesella for lunch).
-- **Llanes** as base: a real fishing town with an old quarter, working port, and beaches — the prettiest coastal base in eastern Asturias, ~40 min from Covadonga. (Alternative base: **Cangas de Onís**, closer to the mountains but inland; choose Llanes unless the group votes mountains-over-coast.)
+The one long day of the trip, and it's front-loaded with the trip's headline mountain visit. Early start.
 
-## Leg 4 — Llanes → Cantabria base (~45 min–1 h with stops)
+1. **Pick up the rental car in Oviedo** (city/station branch — book the one-way to **Bilbao airport** and ⚠️ **confirm the one-way fee** when booking). **Preferred: collect the car the evening before** (overnight parking costs a little, but the big day then starts at 8:00 sharp instead of "whenever the rental counter clears" — pickup paperwork can eat 45 minutes). **Load all luggage in Oviedo; the trunk is not reopened until the Cantabria hotel.** Valuables, meds, and passports ride in daypacks that stay with us at every stop.
+2. Drive Oviedo → **Cangas de Onís** (~1 h motorway + valley road). **Park at the bus-station lot.**
+3. **Lakes of Covadonga by shuttle:** the lakes road is **closed to private cars June–mid-October**; an **Alsa shuttle** runs from Cangas de Onís. ⚠️ **Book the shuttle online in advance** — the season's plan/timetable publishes around **early spring** (verify exact dates and booking window then). Do the **lakes first** (morning light, thinner crowds), the **basilica and Holy Cave after** (the shuttle route serves both), then **lunch in Cangas de Onís**.
+4. Drive east on the A-8 to the Cantabria base (~1h15–1h30). **Optional stop if energy allows: Llanes (old town + port) or Playa de Gulpiyuri (short flat walk; needs high-ish tide).**
+5. **Weather rule:** if the morning is bad, skip the lakes entirely (don't ride a shuttle into cloud) — visit the basilica briefly or drive straight through with the coastal stops instead; Fuente Dé later in the week is the mountain backup.
 
-- Short hop east on the A-8, with the sightseeing *on the way*: the **Bufones de Pría** blowholes (tide/swell dependent — check before detouring) and **San Vicente de la Barquera** (photogenic harbor town, natural lunch stop).
-- **Base: Comillas or Santillana del Mar** (15 min apart — pick on lodging quality; both are small, historic, and central to everything in western Cantabria). Three nights = arrival day + two full days: one coast day, one weather-flex mountain day (Fuente Dé).
-- **Fuente Dé logistics** (the flex day): ~1¼ h each way from the base via the **La Hermida gorge** road — slow, winding, spectacular. Cable car runs continuously; queues form midday in season — go early. Decision rule: **check the Fuente Dé webcam/weather at breakfast** — clear = mountains, cloud = Altamira/Santander instead.
+## Leg 4 — Western Cantabria base (4 nights)
 
-## Leg 5 — Cantabria → Bilbao (~1.5 h) and the Basque days
+- **Base choice:** **Comillas or San Vicente de la Barquera if sea views matter; Santillana del Mar otherwise.** All three are 10–20 min apart; pick on lodging quality within that rule.
+- Day shape:
+  1. **Arrival day** (via Covadonga — nothing planned in the evening).
+  2. **Coast day:** Santillana del Mar early or in the evening (it empties when the tour buses leave), Comillas + El Capricho, **Altamira museum optional**.
+  3. **Weather-flex day:** **Fuente Dé cable car + Potes** if the morning is clear (check the webcam at breakfast; ~1¼ h each way via the La Hermida gorge; go early to beat queues) — **Santander** if not (Magdalena peninsula, El Sardinero promenade, Mercado de la Esperanza).
+  4. **Spare day:** beach, Santoña (anchovies), or whichever of the above got weathered out. This is the slack in the system.
 
-- Drive east on the A-8; optional stops at **Santoña** (anchovy capital) or **Castro Urdiales** (harbor promenade).
-- **Keep the car through Bilbao rather than dropping it on arrival** — recommended, because it enables the Basque-coast day (Getaria + Gaztelugatxe/Gernika) and then becomes the airport transfer: **drop the car at Bilbao airport (BIO) on the morning of departure**. ⚠️ Requires a Bilbao hotel with parking — confirm when booking. (Fallback plan: drop the car on arrival in the city and do Bilbao car-free; the Getaria day then needs a taxi/driver or gets cut, with Bilbao's own pintxos carrying the food flag.)
-- Bilbao airport is 20–25 min from the center. Final morning: drive to BIO, drop car, fly.
+## Leg 5 — Cantabria → Bilbao (~1.5 h) and the Basque days (3 nights)
+
+- Drive east on the A-8 (arrive Sunday); optional stop at **Santoña** or **Castro Urdiales** if the spare day didn't cover them.
+- **Keep the car through Bilbao** — ⚠️ requires a hotel with parking, confirm when booking. City days need no car (Guggenheim, Casco Viejo, Ribera market, Artxanda funicular — all walkable/funicular/metro).
+- ⚠️ **Scheduling constraint: the Guggenheim is traditionally closed Mondays outside high summer — verify for our dates.** With a Sunday arrival, this forces the order: **coast day Monday, Guggenheim Tuesday.** Happy accident: **Monday is Gernika's famous market day** — the living version of the market *Guernica* depicts.
+- **Basque coast day (Monday, with the car): the Urdaibai loop** — **Gaztelugatxe** (free timed permit required in season; ~240 steps each way — the clifftop viewpoint needs none) → **Bermeo** (working fishing port, simple portside lunch) → **Gernika** (assembly house, the oak, and the Monday market) → back to Bilbao. All on the near coast, 30–45 min out.
+- **Eating in Bilbao, two registers:** casual — **Santurtzi's harborside grilled sardines** or the **Puerto Viejo de Algorta** harbor steps (both ~20–25 min by metro); splurge — **book a traditional Bilbao asador/fish house** for the whole-turbot-over-coals dinner (same fish, same auctions as Getaria; what's lost is only the harbor setting). Pintxos in the Casco Viejo the other evening.
+- **If the flex night lands in Bilbao:** the bonus day is **Getaria + Zumaia** (~1 h east by motorway, 15 min apart) — the harbor grill row and the flysch cliffs. Book the Getaria table only if this happens.
+- **Final morning (Wednesday):** drive to **Bilbao airport (BIO)**, drop the car, fly. BIO is 20–25 min from the center.
 
 ---
 
@@ -65,7 +73,7 @@
 
 1. Flights (both couples' full chains, incl. parents' Madrid airport-hotel night).
 2. Renfe Alvia Madrid → Oviedo — when sales open.
-3. One-way rental car Oviedo → Bilbao airport (automatic if needed — early).
-4. Hotels: Madrid 3, Oviedo 2, Llanes 2, Comillas/Santillana 3, Bilbao 2 (with parking), parents' MAD airport 1.
-5. Timed tickets: Prado, Royal Palace, Guggenheim, Altamira; Gaztelugatxe free permit; Getaria grill-house table.
-6. Check near the date: Covadonga lakes shuttle-bus rules for early September, bufones tide/swell, Fuente Dé weather.
+3. One-way rental car Oviedo → Bilbao airport (confirm one-way fee; automatic if needed — early).
+4. **Alsa Covadonga lakes shuttle** — book online once the season's plan publishes (~early spring).
+5. Hotels: Madrid 3, Oviedo 2, Cantabria 4 (sea-view rule above), Bilbao 3 (with parking), parents' MAD airport 1 — **all refundable until the flex-night decision is made**.
+6. Timed tickets: Prado (opening slot), Guggenheim (⚠️ verify Monday closure — plan on Tuesday), Gaztelugatxe permit, Altamira (optional); tables: Botín (Madrid), a traditional Bilbao asador (the splurge fish dinner); Getaria grill only if the flex night lands in Bilbao.
