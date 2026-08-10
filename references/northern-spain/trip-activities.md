@@ -34,7 +34,7 @@ The trip's headline mountain visit, folded into the move east. Early start; lugg
 - **Lakes of Covadonga first** (morning): the Alsa shuttle from Cangas de Onís bus station up to lakes Enol and Ercina at ~1,100 m — green glacial water, grazing cows, the Picos all around. Short optional strolls between viewpoints; nothing strenuous. (Road closed to private cars June–mid-Oct; shuttle booked online in advance.)
 - **The basilica and Holy Cave after** — the pink basilica in its mountain amphitheater and the shrine in the cliff where, tradition says, the Reconquista began.
 - **Lunch in Cangas de Onís** — the medieval-looking "Roman bridge" with the Victory Cross hanging beneath it is the postcard.
-- **Driving east afterward, optional stop if energy allows:** **Llanes** (fishing-town old quarter and port) or **Playa de Gulpiyuri** (the famous inland beach — a sinkhole meadow that fills with sea through a cave; short flat walk, best near high tide).
+- **Driving east afterward, optional stop if energy allows:** **Llanes** (fishing-town old quarter and port), **Playa de Gulpiyuri** (the famous inland beach — a sinkhole meadow that fills with sea through a cave; short flat walk, best near high tide — hold it loosely, it underwhelms at low tide), or the **San Roque viewpoint above Lastres** (ten minutes, the classic cliff-village panorama).
 - **Weather rule:** bad morning = skip the lakes (no shuttle into cloud); see the basilica briefly or push on to the coast stops. Fuente Dé later in the week is the mountain backup.
 
 ## Western Cantabria — 4 nights (Comillas / San Vicente de la Barquera / Santillana del Mar)
@@ -63,7 +63,7 @@ A former industrial city reborn around one building, with the best casual eating
   - **Gernika** — the Basque assembly house and its oak, and, on Mondays, the famous **market day** — the living version of the market Picasso's painting depicts.
   - All within 30–45 min of Bilbao on the near coast; one coherent loop, no motorway marathon.
 - **The seafood plan, two registers:**
-  - **Casual:** grilled sardines on the harbor at **Santurtzi**, or *rabas* and anchovies eaten on the stone steps of **Algorta's Puerto Viejo** — both on the metro, both the plastic-stools-spirit answer to how this family loves to eat.
+  - **Casual:** grilled sardines on the harbor at **Santurtzi**, or *rabas* and anchovies eaten on the stone steps of **Algorta's Puerto Viejo** — both on the metro, both the plastic-stools-spirit answer to how this family loves to eat. En route between them: the **Vizcaya Bridge**, the world's first transporter bridge (UNESCO, 1893) — cross the river hanging from its gondola for under a euro on the way to dinner.
   - **Splurge:** one booked dinner at a **traditional Bilbao asador/fish house** — whole wild turbot or *besugo* over coals, the same fish from the same auctions as Getaria's famous grills; only the harbor setting is missing.
 - **If the flex night lands in Bilbao (current lean):** the bonus day is **Getaria + Zumaia** — the harbor grill row, txakoli on the hill above it, and the flysch cliffs 15 minutes away. Getaria is deliberately *not* load-bearing: it's the encore, not the show.
 - Final morning: drive to the airport, drop the car, fly.

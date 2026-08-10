@@ -42,4 +42,4 @@
 
 ## Deliberately NOT booked in advance
 
-- Segovia (game-time), sidrerías in Oviedo (walk in — it's the culture), pintxos bars in Bilbao (grazing is the point), Artxanda funicular, El Rastro, Retiro, all beaches, Santoña, Santander, and every meal not named above. Exactly enough reservations to remove stress, and not one more.
+- Segovia (game-time), sidrerías in Oviedo (walk in — it's the culture), pintxos bars in Bilbao (grazing is the point), Artxanda funicular, the Vizcaya Bridge gondola (turn up, under €1), El Rastro, Retiro, all beaches, Santoña, Santander, and every meal not named above. Exactly enough reservations to remove stress, and not one more.
