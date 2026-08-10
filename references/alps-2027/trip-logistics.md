@@ -1,7 +1,7 @@
 # Family Trip Logistics — Munich → Allgäu → Swiss Alps → Italian Lakes → Venice → Milan
 
 **Season:** September 2027, early–mid (shoulder season — mild weather, thinner crowds, sea and lakes still warm)
-**Travelers:** Parents (arriving from Singapore) + Xian and partner (arriving from Philadelphia)
+**Travelers:** Parents (arriving from Singapore) + X and partner (arriving from Philadelphia)
 **Total:** ~12 nights (2–3 Rettenberg + 9 onward)
 **Core principle:** We self-drive only in Bavaria (one rental car, Munich → Lindau); after Lindau it's trains, lake ferries, and one booked private transfer. Every travel day is a half-day or less, except the two scenic rail days — which are attractions in themselves.
 
